@@ -2,6 +2,9 @@
  *  we need three things: scene, camera and renderer,
  *  so that we can render the scene with camera.
  */
+
+import { GLTFLoader } from "./GLTFLoader.js";
+
 var scene = new THREE.Scene(); //initilize
 var camera = new THREE.PerspectiveCamera(
   75, //field of view
@@ -10,7 +13,8 @@ var camera = new THREE.PerspectiveCamera(
   1000 //far plane
 );
 
-camera.position.z = 3;
+camera.position.set(0, 2, 0);
+camera.position.z = 5;
 
 var renderer = new THREE.WebGLRenderer({ antialias: true }); //initilize the renderer WebGLRenderer
 renderer.setClearColor("#e5e5e5"); //background color
@@ -23,24 +27,23 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
 });
 
-document.body.appendChild(renderer.domElement); //This is a <canvas> element the renderer uses to display the scene to us.
-
-var geometry = new THREE.BoxGeometry(1, 1, 1);
-var material = new THREE.MeshLambertMaterial({ color: 0xf6f6f6 });
-var mesh = new THREE.Mesh(geometry, material);
-
-scene.add(mesh);
-
-//source light for the scene
-var light = new THREE.PointLight(0xffffff, 2, 1000);
-light.position.set(0, 0, 25);
-scene.add(light);
-
 //render the scene
 var render = function () {
     requestAnimationFrame(render);
-    mesh.rotation.y += 0.01;
+    scene.rotation.y += 0.005;
     renderer.render(scene, camera);
 };
+
+document.body.appendChild(renderer.domElement); //This is a <canvas> element the renderer uses to display the scene to us.
+
+var loader = new GLTFLoader();
+loader.load("assets/scene.gltf", function (gltf) {
+    scene.add(gltf.scene);
+    render();
+});
+
+//source light for the scene
+var light = new THREE.HemisphereLight( 0xffffff, 0x000000, 5 );
+scene.add(light); 
 
 render();
