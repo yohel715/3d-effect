@@ -23,31 +23,24 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
 });
 
-//render the scene
-var render = function () {
-  requestAnimationFrame(render);
-  mesh.rotation.y += 0.01;
-  renderer.render(scene, camera);
-};
-
 document.body.appendChild(renderer.domElement); //This is a <canvas> element the renderer uses to display the scene to us.
 
-var raycaster = new THREE.Raycaster();
-var mouse = new THREE.Vector2();
 var geometry = new THREE.BoxGeometry(1, 1, 1);
-var material = new THREE.MeshLambertMaterial({ color: 0xf1f1f1 });
+var material = new THREE.MeshLambertMaterial({ color: 0xf6f6f6 });
 var mesh = new THREE.Mesh(geometry, material);
 
 scene.add(mesh);
 
 //source light for the scene
-var light = new THREE.PointLight(0xffffff, 1, 1000);
-light.position.set(0, 0, 0);
-scene.add(light);
-
-//source light for the scene
 var light = new THREE.PointLight(0xffffff, 2, 1000);
 light.position.set(0, 0, 25);
 scene.add(light);
+
+//render the scene
+var render = function () {
+    requestAnimationFrame(render);
+    mesh.rotation.y += 0.01;
+    renderer.render(scene, camera);
+};
 
 render();
