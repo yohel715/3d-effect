@@ -18,8 +18,8 @@ camera.position.set(0, 0, 10);
 var renderer = new THREE.WebGLRenderer({ antialias: true }); //initilize the renderer WebGLRenderer
 renderer.setClearColor(0x000000, 0); //background color
 
-//renderer.setSize(window.innerWidth, window.innerHeight); //set the size of the renderer to the size of the window
-renderer.setSize(440, 640); //set the size of the renderer to the size of the window
+renderer.setSize(window.innerWidth, window.innerHeight); //set the size of the renderer to the size of the window
+
 
 //resize the renderer and the camera when the window is resized
 window.addEventListener("resize", () => {
@@ -60,7 +60,7 @@ scene.add( directionalLight );
 
 //on down scroll addEventListener
 window.addEventListener("scroll", function (event) {
-  object.rotation.y += 0.2; //rotate the objec
+  object.rotation.y += 0.3; //rotate the objec
   //document.getElementsByClassName("shadow")[0].style.display = "none";
 });
 
