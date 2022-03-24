@@ -1,8 +1,8 @@
 body { 
-    margin: 0; 
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
+    margin: 0; 
 }
 
 .container {
@@ -19,24 +19,31 @@ body {
 }
   
 canvas { 
+    animation: up-down 1s infinite ease-in-out alternate;
+    bottom: 0;
     display: flex;
     position: fixed;
-    bottom: 0;
-    animation: up-down 1s infinite ease-in-out alternate;
     z-index: 1;
 }
 
 .shadow {
-    display: block;
-    position: fixed;
-    bottom: 50px;
-    background-color: black;
-    width: 150px;
-    height: 40px;
-    z-index: 10;
-    opacity: 0.2;
-    border-radius: 100%;
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    -webkit-filter: blur(5px);
+    /* blur */
+    /* opacity */
     animation: shadow-long 1s infinite ease-in-out alternate;
+    background-color: black;
+    border-radius: 100%;
+    bottom: 50px;
+    display: block;
+    filter: blur(5px);
+    height: 40px;
+    opacity: 0.2;
+    position: fixed;
+    width: 150px;
+    z-index: 10;
 }
 
 @keyframes shadow-long {
@@ -47,7 +54,6 @@ canvas {
         width: 150px;
     }
 }   
-
 
 @keyframes up-down {
     0% {
