@@ -48,15 +48,19 @@ loader.load("assets/vaso.gltf", function (gltf) {
 });
 
 //source light for the scene
-var hemisphereLight = new THREE.HemisphereLight( 0xffffff, 0x080820, 0.5 );
+var hemisphereLight = new THREE.HemisphereLight( 0x404040, 0x080820, 2.5 );
 scene.add( hemisphereLight );
 
-var ambientLight = new THREE.AmbientLight( 0x404040, 3 );
+var ambientLight = new THREE.AmbientLight( 0x404040, 1.5);
 scene.add( ambientLight );
 
-var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
-directionalLight.position.set( 10000, -10000, 1000 );
-scene.add( directionalLight );
+var pointLightR = new THREE.PointLight( 0xDFECF8, 2, 100, 2 );
+pointLightR.position.set( 20, -5, 4 );
+scene.add(pointLightR);
+
+var pointLightL = new THREE.PointLight( 0xDFECF8, 2, 100, 2 );
+pointLightL.position.set( -20, -5, 4 );
+scene.add( pointLightL );
 
 //on down scroll addEventListener
 window.addEventListener("scroll", function (event) {
