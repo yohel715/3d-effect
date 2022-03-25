@@ -68,7 +68,7 @@ scene.add( pointLightL );
 
 //on down scroll addEventListener
 window.addEventListener("scroll", function (event) {
-  object.rotation.y += 0.3; //rotate the objec
+  //object.rotation.y += 0.3; //rotate the objec
   //document.getElementsByClassName("shadow")[0].style.display = "none";
 });
 
