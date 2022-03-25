@@ -54,7 +54,7 @@ scene.add( hemisphereLight );
 var ambientLight = new THREE.AmbientLight( 0xffffff, 0.6);
 scene.add( ambientLight );
 
-var pointLightUp = new THREE.PointLight( 0xffffff, 0.5, 20, 1 );
+var pointLightUp = new THREE.PointLight( 0xffffff, 1, 20, 3 );
 pointLightUp.position.set( 0, 0, 15 );
 scene.add( pointLightUp );
 
