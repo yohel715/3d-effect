@@ -47,7 +47,7 @@ canvas {
 
 @keyframes shadow-long {
     0% {
-        width: 120px;
+        width: 130px;
     }
     100% {
         width: 150px;
