@@ -1,6 +1,8 @@
 body {
   margin: 0;
+  padding: 0;
 }
+
 main {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
@@ -8,17 +10,17 @@ main {
   max-height: 100vh;
 }
 
-.container {
+section {
   scroll-snap-align: start;
   min-height: 100vh;
   width: 100%;
 }
 
-#first {
+section:nth-child(1) {
   background-color: #f2f2f2;
 }
 
-#second {
+section:nth-child(2) {
   background-color: #b1b1b1;
 }
 
@@ -29,12 +31,12 @@ main {
 
 .rendered-object canvas {
   animation: up-down 1s infinite ease-in-out alternate;
-  bottom: 30%;
+  bottom: 5%;
   pointer-events: none;
   position: absolute;
   /* The height and width are set using js */
-  height: 50% !important;
-  width: 50% !important;
+  height: 90% !important;
+  width: 90% !important;
 }
 
 .shadow {
@@ -46,7 +48,7 @@ main {
   animation: shadow-long 1s infinite ease-in-out alternate;
   background-color: #000;
   border-radius: 100%;
-  bottom: 30%;
+  bottom: 10%;
   display: block;
   filter: blur(5px);
   height: 40px;
