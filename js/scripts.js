@@ -1,9 +1,11 @@
 /* To actually be able to display anything with three.js,
  *  we need three things: scene, camera and renderer,
  *  so that we can render the scene with camera.
+ *  We can create them here, and then render them in the render function.
  */
 
 import { GLTFLoader } from "./GLTFLoader.js";
+import * as THREE from "three";
 
 var scene = new THREE.Scene(); //initilize
 var camera = new THREE.PerspectiveCamera(
@@ -33,8 +35,8 @@ var render = function () {
     requestAnimationFrame(render);
     renderer.render(scene, camera);
 };
-
-document.body.appendChild(renderer.domElement); //This is a <canvas> element the renderer uses to display the scene to us.
+const elementContainer = document.querySelector('.rendered-object');
+elementContainer.appendChild(renderer.domElement); //This is a <canvas> element the renderer uses to display the scene to us.
 
 var loader = new GLTFLoader();
 var object;
@@ -67,9 +69,13 @@ pointLightL.position.set( -20, -5, -2 );
 scene.add( pointLightL );
 
 //on down scroll addEventListener
-window.addEventListener("scroll", function (event) {
-  //object.rotation.y += 0.3; //rotate the objec
-  //document.getElementsByClassName("shadow")[0].style.display = "none";
+const mainElement = document.querySelector('body > main');
+let lastScrollTop = 0;
+
+mainElement.addEventListener("scroll", function () {
+  const direction = lastScrollTop > this.scrollTop ? 1 : -1;
+  lastScrollTop = mainElement.scrollTop;
+  object.rotation.y += 0.12 * direction; //rotate the object
 });
 
 // var isScrolling;

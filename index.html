@@ -9,14 +9,22 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <section></section>
-      <section></section>
-      <span class="shadow"></span>
-    </div>
+    <main>
+      <div class="rendered-object">
+        <div class="shadow"></div>
+      </div>
+      <div id="first" class="container"></div>
+      <div id="second" class="container"></div>
+    </main>
   </body>
   <!-- scripts -->
-  <script src="/js/three.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/js/three.module.js"
+      }
+    }
+  </script>
   <script type="module" src="./js/GLTFLoader.js"></script>
   <script type="module" src="/js/scripts.js"></script>
 </html>

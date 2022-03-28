@@ -1,73 +1,75 @@
-* {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+}
+main {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  max-height: 100vh;
 }
 
-.container { 
-    align-items: center;
-    display: flex;
-    flex-direction: column; 
-    overflow: auto;
-    scroll-snap-type: y mandatory;
+.container {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  width: 100%;
 }
 
-section {
-    min-width: 100%;
-    min-height: 100vh;
-    scroll-snap-align: start;
+#first {
+  background-color: #f2f2f2;
 }
 
-section:nth-of-type(1) {
-    background-color: #f2f2f2;
+#second {
+  background-color: #b1b1b1;
 }
 
-section:nth-of-type(2) {
-    background-color: #b1b1b1;
+.rendered-object {
+  display: flex;
+  justify-content: center;
 }
-  
-canvas { 
-    /* animation: up-down 1s infinite ease-in-out alternate; */
-    bottom: 0;
-    display: flex;
-    position: fixed;
-    z-index: 1;
+
+.rendered-object canvas {
+  animation: up-down 1s infinite ease-in-out alternate;
+  bottom: 30%;
+  pointer-events: none;
+  position: absolute;
+  /* The height and width are set using js */
+  height: 50% !important;
+  width: 50% !important;
 }
 
 .shadow {
-    /* blur */
-    -moz-filter: blur(5px);
-    -ms-filter: blur(5px);
-    -o-filter: blur(5px);
-    -webkit-filter: blur(5px);
-    /* animation: shadow-long 1s infinite ease-in-out alternate; */
-    background-color: black;
-    border-radius: 100%;
-    bottom: 50px;
-    display: block;
-    filter: blur(5px);
-    height: 40px;
-    opacity: 0.7;
-    position: fixed;
-    width: 150px;
-    z-index: 10;
+  /* blur */
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
+  -webkit-filter: blur(5px);
+  animation: shadow-long 1s infinite ease-in-out alternate;
+  background-color: #000;
+  border-radius: 100%;
+  bottom: 30%;
+  display: block;
+  filter: blur(5px);
+  height: 40px;
+  opacity: 0.7;
+  position: fixed;
+  width: 150px;
+  z-index: 10;
 }
 
 @keyframes shadow-long {
-    0% {
-        width: 130px;
-    }
-    100% {
-        width: 150px;
-    }
-}   
+  0% {
+    width: 130px;
+  }
+  100% {
+    width: 150px;
+  }
+}
 
 @keyframes up-down {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-10px);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
