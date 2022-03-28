@@ -1,3 +1,26 @@
+/* import all @font-face from ../assets/fonts/landerwebdesktop/lander */
+@font-face {
+  font-family: 'LanderShort-Bold';
+  src: url('../assets/fonts/landerwebdesktop/lander/LanderShort-Bold.otf');
+  font-weight: 700, Bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LanderShort-Regular';
+  src: url('../assets/fonts/landerwebdesktop/lander/LanderShort-Regular.otf');
+  font-weight: 400, Regular;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SoDoSans-Black';
+  src: url('../assets/fonts/sodowebdesktop/SoDoSansWebFonts/SoDoSans-Bold.woff');
+  font-weight: 700, Bold;
+  font-style: normal;
+}
+/* end font */
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +29,7 @@ body {
 main {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  /* scroll-snap-points-y: repeat(100vh); */
   overflow-y: scroll;
   max-height: 100vh;
 }
@@ -17,15 +41,77 @@ section {
 }
 
 section:nth-child(1) {
-  background-color: #f2f2f2;
+  background-image: url('../img/doodles_patterns.png') !important;
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(180deg, rgba(213, 230, 224, 1) 0%, rgba(228, 238, 227, 1) 100%);
+  background-color: #D5E6E0CC;
 }
 
 section:nth-child(2) {
-  background-color: #b1b1b1;
+  background-color: #1E3932;
 }
 
-.rendered-object {
+section:nth-child(3) {
+  background-color: #D5E6E0CC;
+}
+
+/**************/
+
+#first {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title-content {
+  padding-top: 82px;
+  width: 90%;
+}
+
+.title-content .title,
+.title-content .subtitle {
+  font-family: 'LanderShort-Bold';
+  text-align: center;
+  margin: 0;
+}
+
+.title-content .title {
+  background-image: url('../img/title.png') !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  color: #006241; 
+  height: 103px;
+  padding-top: 60px;
+  width: 100%;
+}
+
+.title-content .subtitle {
+  color: #C4B58C;
+  font-size: 76px;
+  letter-spacing: 0.01em;
+  line-height: 150px;
+}
+
+.title-content .hashtag {
+  color: #006241;
+  font-family: 'SoDoSans-Black';
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 37px;
+  text-align: start;
+}
+
+/* 3d object */
+.rendered-object {
+  display: none;
   justify-content: center;
 }
 
@@ -52,7 +138,7 @@ section:nth-child(2) {
   display: block;
   filter: blur(5px);
   height: 40px;
-  opacity: 0.7;
+  opacity: 0.2;
   position: fixed;
   width: 150px;
   z-index: 10;

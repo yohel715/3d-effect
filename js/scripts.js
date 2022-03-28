@@ -1,7 +1,6 @@
 /* To actually be able to display anything with three.js,
  *  we need three things: scene, camera and renderer,
  *  so that we can render the scene with camera.
- *  We can create them here, and then render them in the render function.
  */
 
 import { GLTFLoader } from "./GLTFLoader.js";
@@ -15,7 +14,7 @@ var camera = new THREE.PerspectiveCamera(
   1000 //far plane
 );
 
-camera.position.set(0, 0, 10);
+camera.position.set(0, 0, 10); // X, Y, Z
 
 var renderer = new THREE.WebGLRenderer({ antialias: true }); //initilize the renderer WebGLRenderer
 renderer.setClearColor(0x000000, 0); //background color
@@ -40,12 +39,12 @@ elementContainer.appendChild(renderer.domElement); //This is a <canvas> element 
 
 var loader = new GLTFLoader();
 var object;
-loader.load("assets/vaso.gltf", function (gltf) {
-    object = gltf.scene;
-    //object.scale.set(1, 1, 1);
-    object.position.set(0, -4, 0)
-    object.rotation.set(0.5, 1.5, 0)
-    scene.add(gltf.scene);
+loader.load("assets/vaso.gltf", function (gltf) { //load the gltf file
+    object = gltf.scene; //get the scene from the gltf file
+    object.scale.set(1, 1, 1); //scale the object, X, Y, Z
+    object.position.set(0, -6, 0) //position the object, X, Y, Z
+    object.rotation.set(0.3, 4.7, 0) //rotate the object, X, Y, Z
+    scene.add(gltf.scene); //add the object to the scene
     render();
 });
 
@@ -75,16 +74,23 @@ let lastScrollTop = 0;
 mainElement.addEventListener("scroll", function () {
   const direction = lastScrollTop > this.scrollTop ? 1 : -1;
   lastScrollTop = mainElement.scrollTop;
-  object.rotation.y += 0.12 * direction; //rotate the object
-});
+  object.rotation.y += 0.11 * direction; //rotate the object
+  //get the amount of pixels the user has scrolled
+  const scrollAmount = mainElement.scrollTop;
+  const windowHeight = window.innerHeight; //height of the window
+  const mainElementHeight = mainElement.scrollHeight; //height of the main element
+  const scrollPercentage = scrollAmount / (mainElementHeight - windowHeight);//percentage of the scroll  
+  console.log(scrollPercentage);
 
-// var isScrolling;
-// window.addEventListener('scroll', function ( event ) {
-// 	window.clearTimeout( isScrolling );
-// 	isScrolling = setTimeout(function() {
-// 		//console.log( 'Scrolling has stopped.' );
-//     document.getElementsByClassName("shadow")[0].style.display = "block";
-// 	});
-// }, false);
+  //change the position absolute of the canva element 
+  const canvaElement = document.querySelector('.rendered-object > canvas');
+
+  if (scrollPercentage >= 0.5) {
+    canvaElement.style.position = "inherit";
+  } else if (scrollPercentage <= 0.46) {
+    canvaElement.style.position = "absolute";
+  }
+
+});
 
 render();
