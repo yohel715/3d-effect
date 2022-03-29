@@ -267,8 +267,10 @@ section:nth-child(3) {
   list-style: none;
   margin: 0;
   padding: 0 20px 0 0;
-  height: 30px;
-  width: 30px;
+}
+
+.footer .social-media li:last-of-type {
+  padding-right: 0px;
 }
 
 .footer .starbuck-logo {
@@ -358,14 +360,19 @@ section:nth-child(3) {
     width: 80%;
   }
   .footer {
+    padding: 0px 30px;
     height: 330px;
     flex-direction: column;
     align-items: center;
     justify-content: end;
   }
-  .footer .social-media ul {
-    height: 30px;
-    width: 30px;
+  .footer .social-media {
+    justify-content: center;
+  }
+  .footer p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
   }
   .footer .starbuck-logo {
     width: 90px;
@@ -386,6 +393,9 @@ section:nth-child(3) {
     line-height: 0px;
     padding-top: 5px;
     text-align: center;
+  }
+  .footer {
+    margin-bottom: 0px;
   }
 }
 
