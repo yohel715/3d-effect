@@ -70,6 +70,9 @@ scene.add( pointLightL );
 //on down scroll addEventListener
 const mainElement = document.querySelector('body > main');
 let lastScrollTop = 0;
+//change the position absolute of the canva element 
+const canvaElement = document.querySelector('.rendered-object > canvas');
+var detailsElement = document.querySelectorAll('.details-cup-content .row .detail');
 
 mainElement.addEventListener("scroll", function () {
   const direction = lastScrollTop > this.scrollTop ? 1 : -1;
@@ -80,15 +83,19 @@ mainElement.addEventListener("scroll", function () {
   const windowHeight = window.innerHeight; //height of the window
   const mainElementHeight = mainElement.scrollHeight; //height of the main element
   const scrollPercentage = scrollAmount / (mainElementHeight - windowHeight);//percentage of the scroll  
-  console.log(scrollPercentage);
-
-  //change the position absolute of the canva element 
-  const canvaElement = document.querySelector('.rendered-object > canvas');
+  // console.log(scrollPercentage);
 
   if (scrollPercentage >= 0.5) {
     canvaElement.style.position = "inherit";
-  } else if (scrollPercentage <= 0.49) {
+    // detailsElement.forEach(element => {
+    //   element.style.display = "block";
+    // });
+  } 
+  else if (scrollPercentage <= 0.49) {
     canvaElement.style.position = "absolute";
+    // detailsElement.forEach(element => {
+    //   element.style.display = "none";
+    // });
   }
 
 });

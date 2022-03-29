@@ -1,14 +1,28 @@
 /* import all @font-face from ../assets/fonts/landerwebdesktop/lander */
 @font-face {
   font-family: 'LanderShort-Bold';
-  src: url('../assets/fonts/landerwebdesktop/lander/LanderShort-Bold.otf');
+  src: url('../assets/fonts/landerwebdesktop/LanderWebFonts/LanderGrande-Bold.woff');
   font-weight: 700, Bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'LanderShort-Regular';
-  src: url('../assets/fonts/landerwebdesktop/lander/LanderShort-Regular.otf');
+  src: url('../assets/fonts/landerwebdesktop/LanderWebFonts/LanderGrande-Regular.woff');
+  font-weight: 400, Regular;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LanderShort-Light';
+  src: url('../assets/fonts/landerwebdesktop/LanderWebFonts/LanderGrande-Light.woff');
+  font-weight: 'light';
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SoDoSans-Regular';
+  src: url('../assets/fonts/sodowebdesktop/SoDoSansWebFonts/SoDoSans-Regular.woff');
   font-weight: 400, Regular;
   font-style: normal;
 }
@@ -19,11 +33,19 @@
   font-weight: 700, Bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Pike-Bold';
+  src: url('../assets/fonts/pikewebdesktop/web/Pike-Bold.woff');
+  font-weight: 700, Bold;
+  font-style: normal;
+}
 /* end font */
 
 body {
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 
 main {
@@ -50,11 +72,12 @@ section:nth-child(1) {
 }
 
 section:nth-child(2) {
-  background-color: rgba(228, 238, 227, 1);
+  background-color: white;
+  /* position: relative; */
 }
 
 section:nth-child(3) {
-  background-color: rgb(212, 212, 212);
+  background-color: white;
 }
 
 /**************/
@@ -114,28 +137,128 @@ section:nth-child(3) {
   width: 100%;
 }
 
-.trees1,
-.trees02 {
+.trees {
+  position: absolute;
+  top: 150px;
+  background-image: url('../img/arboles.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   mix-blend-mode: multiply;
+  opacity: 1;
+  width: 100%;
+  z-index: 3;
+}
+
+/**** second section *****/
+.details-cup-content {
   position: absolute;
+  display: none !important;
+  top: 40%;
   width: 100%;
 }
 
-.trees01 {
-  background-image: url('../img/arboles-capa1.png');
-  mix-blend-mode: multiply;
-  z-index: 1;
+.details-cup-content .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.trees02 {
-  background-image: url('../img/arboles-capa2.png');
-  z-index: 2;
+.details-cup-content .row .detail {
+  align-items: center;
+  /* display: flex; */
+  flex-direction: column;
+  font-family: 'SoDoSans-Regular';
+  justify-content: center;
+  padding: 0 100px 50px 100px;
+  width: 80%;
 }
 
+/**** thrid section *****/
+.hashtag-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hashtag-content h4 {
+  font-family: 'Pike-Bold';
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 90px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.hashtag-content h4::after {
+  background-image: url('../img/underline.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  display: block;
+  height: 50px;
+  margin-top: -20px;
+  transform: rotate(-1.19deg);
+  width: 730px;
+}
+
+.hashtag-content p {
+  font-family: 'SoDoSans-Regular';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 36px;
+  margin: 0;
+  text-align: center;
+  width: 950px;
+}
+
+.footer {
+  background-color: #1E3932;
+  color: white;
+  padding: 50px 122px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer p {
+  font-family: 'Landershort-Light';
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.footer .social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.footer .social-media li {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px 0 0;
+  height: 30px;
+  width: 30px;
+}
+
+.footer .starbuck-logo {
+  width: 127px;
+  height: 129px;
+}
 /* 3d object */
 .rendered-object {
   display: flex;
@@ -150,7 +273,7 @@ section:nth-child(3) {
   /* The height and width are set using js */
   height: 90% !important;
   width: 90% !important;
-  z-index: 3;
+  z-index: 4;
 }
 
 .shadow {
@@ -189,6 +312,9 @@ section:nth-child(3) {
     font-size: 27px;
     line-height: 5px;
     padding-top: 20px;
+  }
+  .hashtag-content h4 {
+    margin-bottom: 25px;
   }
 }
 
