@@ -50,19 +50,19 @@ section:nth-child(1) {
 }
 
 section:nth-child(2) {
-  background-color: #1E3932;
+  background-color: rgba(228, 238, 227, 1);
 }
 
 section:nth-child(3) {
-  background-color: #D5E6E0CC;
+  background-color: rgb(212, 212, 212);
 }
 
 /**************/
 
 #first {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title-content {
@@ -81,18 +81,17 @@ section:nth-child(3) {
   background-image: url('../img/title.png') !important;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover !important;
-  color: #006241; 
-  height: 103px;
-  padding-top: 60px;
-  width: 100%;
+  background-size: contain !important;
+  color: #006241;
+  height: 164px;
+  width: auto;
 }
 
 .title-content .subtitle {
   color: #C4B58C;
   font-size: 76px;
   letter-spacing: 0.01em;
-  line-height: 150px;
+  line-height: 80px;
 }
 
 .title-content .hashtag {
@@ -102,20 +101,48 @@ section:nth-child(3) {
   font-style: normal;
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 0;
+  line-height: 5px;
   margin: 0;
-  padding-left: 10px;
   padding-top: 37px;
   text-align: start;
 }
 
+.container-trees {
+  position: relative;
+  display: block;
+  height: 100vh;
+  width: 100%;
+}
+
+.trees1,
+.trees02 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 100%;
+}
+
+.trees01 {
+  background-image: url('../img/arboles-capa1.png');
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.trees02 {
+  background-image: url('../img/arboles-capa2.png');
+  z-index: 2;
+}
+
 /* 3d object */
 .rendered-object {
-  display: none;
+  display: flex;
   justify-content: center;
 }
 
-.rendered-object canvas {
+.rendered-object canvas { /* Vaso 3d */
   animation: up-down 1s infinite ease-in-out alternate;
   bottom: 5%;
   pointer-events: none;
@@ -123,6 +150,7 @@ section:nth-child(3) {
   /* The height and width are set using js */
   height: 90% !important;
   width: 90% !important;
+  z-index: 3;
 }
 
 .shadow {
@@ -142,6 +170,26 @@ section:nth-child(3) {
   position: fixed;
   width: 150px;
   z-index: 10;
+}
+
+/* responsive for desktop less than 1300px */
+@media screen and (max-width: 1300px) {
+  .title-content {
+    padding-top: 54px;
+    width: 84%;
+  }
+  .title-content .subtitle {
+    font-size: 67px;
+    line-height: 95px;
+  }
+  .title-content .title {
+    height: 154px;
+  }
+  .title-content .hashtag {
+    font-size: 27px;
+    line-height: 5px;
+    padding-top: 20px;
+  }
 }
 
 @keyframes shadow-long {

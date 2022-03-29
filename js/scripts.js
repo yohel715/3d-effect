@@ -41,8 +41,8 @@ var loader = new GLTFLoader();
 var object;
 loader.load("assets/vaso.gltf", function (gltf) { //load the gltf file
     object = gltf.scene; //get the scene from the gltf file
-    object.scale.set(1, 1, 1); //scale the object, X, Y, Z
-    object.position.set(0, -6, 0) //position the object, X, Y, Z
+    object.scale.set(0.9, 0.9, 0.9); //scale the object, X, Y, Z
+    object.position.set(0, -5.5, 0) //position the object, X, Y, Z
     object.rotation.set(0.3, 4.7, 0) //rotate the object, X, Y, Z
     scene.add(gltf.scene); //add the object to the scene
     render();
@@ -87,7 +87,7 @@ mainElement.addEventListener("scroll", function () {
 
   if (scrollPercentage >= 0.5) {
     canvaElement.style.position = "inherit";
-  } else if (scrollPercentage <= 0.46) {
+  } else if (scrollPercentage <= 0.49) {
     canvaElement.style.position = "absolute";
   }
 
