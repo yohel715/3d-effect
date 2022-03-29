@@ -21,6 +21,13 @@
 }
 
 @font-face {
+  font-family: 'SoDoSans-Black';
+  src: url('../assets/fonts/sodowebdesktop/SoDoSansWebFonts/SoDoSans-Bold.woff');
+  font-weight: 700, Bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'SoDoSans-Regular';
   src: url('../assets/fonts/sodowebdesktop/SoDoSansWebFonts/SoDoSans-Regular.woff');
   font-weight: 400, Regular;
@@ -28,9 +35,9 @@
 }
 
 @font-face {
-  font-family: 'SoDoSans-Black';
-  src: url('../assets/fonts/sodowebdesktop/SoDoSansWebFonts/SoDoSans-Bold.woff');
-  font-weight: 700, Bold;
+  font-family: 'SoDoSans-Light';
+  src: url('../assets/fonts/sodowebdesktop/SoDoSansWebFonts/SoDoSans-Light.woff');
+  font-weight: 200, 'Light';
   font-style: normal;
 }
 
@@ -90,7 +97,7 @@ section:nth-child(3) {
 
 .title-content {
   padding-top: 82px;
-  width: 90%;
+  width: 80%;
 }
 
 .title-content .title,
@@ -181,8 +188,10 @@ section:nth-child(3) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: flex-start;
   justify-content: center;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .hashtag-content h4 {
@@ -192,6 +201,7 @@ section:nth-child(3) {
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 90px;
+  margin-top: 0px;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -222,18 +232,24 @@ section:nth-child(3) {
 }
 
 .footer {
-  background-color: #1E3932;
+  background-color: white;
+  background-image: url('../img/footer-bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
-  padding: 50px 122px;
+  padding: 0px 122px 40px;
   width: auto;
+  height: 307px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .footer p {
-  font-family: 'Landershort-Light';
+  font-family: 'SoDoSans-Light';
   font-size: 16px;
   line-height: 36px;
   text-align: center;
@@ -259,6 +275,7 @@ section:nth-child(3) {
   width: 127px;
   height: 129px;
 }
+
 /* 3d object */
 .rendered-object {
   display: flex;
@@ -313,8 +330,62 @@ section:nth-child(3) {
     line-height: 5px;
     padding-top: 20px;
   }
+  .hashtag-content {
+    margin-bottom: 0px;
+  }
   .hashtag-content h4 {
+    margin-top: 20px;
     margin-bottom: 25px;
+  }
+  .hashtag-content p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hashtag-content h4 {
+    font-size: 26px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 60px;
+  }
+  .hashtag-content h4::after {
+    height: 20px;
+    width: 90%;
+  }
+  .hashtag-content p {
+    font-size: 14px;
+    width: 80%;
+  }
+  .footer {
+    height: 330px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+  }
+  .footer .social-media ul {
+    height: 30px;
+    width: 30px;
+  }
+  .footer .starbuck-logo {
+    width: 90px;
+    height: 91px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title-content .subtitle {
+    font-size: 34px;
+    line-height: 0px;
+  }
+  .title-content .title {
+    height: 100px;
+  }
+  .title-content .hashtag {
+    font-size: 20px;
+    line-height: 0px;
+    padding-top: 5px;
+    text-align: center;
   }
 }
 
