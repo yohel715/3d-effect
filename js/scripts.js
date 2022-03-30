@@ -78,6 +78,7 @@ mainElement.addEventListener("scroll", function () {
   const direction = lastScrollTop > this.scrollTop ? 1 : -1;
   lastScrollTop = mainElement.scrollTop;
   object.rotation.y += 0.11 * direction; //rotate the object
+  
   //get the amount of pixels the user has scrolled
   const scrollAmount = mainElement.scrollTop;
   const windowHeight = window.innerHeight; //height of the window
@@ -87,15 +88,9 @@ mainElement.addEventListener("scroll", function () {
 
   if (scrollPercentage >= 0.5) {
     canvaElement.style.position = "inherit";
-    // detailsElement.forEach(element => {
-    //   element.style.display = "block";
-    // });
   } 
   else if (scrollPercentage <= 0.49) {
-    canvaElement.style.position = "absolute";
-    // detailsElement.forEach(element => {
-    //   element.style.display = "none";
-    // });
+    canvaElement.style.position = "fixed";
   }
 
 });

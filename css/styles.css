@@ -61,6 +61,10 @@ main {
   /* scroll-snap-points-y: repeat(100vh); */
   overflow-y: scroll;
   max-height: 100vh;
+  background-image: url('../img/background_paper.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
 }
 
 section {
@@ -79,12 +83,7 @@ section:nth-child(1) {
 }
 
 section:nth-child(2) {
-  background-color: white;
-  /* position: relative; */
-}
-
-section:nth-child(3) {
-  background-color: white;
+  position: relative;
 }
 
 /**************/
@@ -161,7 +160,7 @@ section:nth-child(3) {
 /**** second section *****/
 .details-cup-content {
   position: absolute;
-  display: none !important;
+  display: block !important;
   top: 40%;
   width: 100%;
 }
@@ -175,15 +174,25 @@ section:nth-child(3) {
 
 .details-cup-content .row .detail {
   align-items: center;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   font-family: 'SoDoSans-Regular';
   justify-content: center;
   padding: 0 100px 50px 100px;
   width: 80%;
+  z-index: 5;
 }
 
 /**** thrid section *****/
+
+section#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
 .hashtag-content {
   display: flex;
   flex-direction: column;
@@ -232,7 +241,6 @@ section:nth-child(3) {
 }
 
 .footer {
-  background-color: white;
   background-image: url('../img/footer-bg.svg');
   background-position: center;
   background-repeat: no-repeat;
@@ -245,7 +253,7 @@ section:nth-child(3) {
   align-items: flex-end;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 .footer p {
@@ -269,6 +277,14 @@ section:nth-child(3) {
   padding: 0 20px 0 0;
 }
 
+.footer .social-media li:hover {
+  opacity: 0.6;
+}
+
+.footer .social-media li:active {
+  opacity: 0.8;
+}
+
 .footer .social-media li:last-of-type {
   padding-right: 0px;
 }
@@ -288,7 +304,7 @@ section:nth-child(3) {
   animation: up-down 1s infinite ease-in-out alternate;
   bottom: 5%;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   /* The height and width are set using js */
   height: 90% !important;
   width: 90% !important;
