@@ -80,18 +80,14 @@ section:nth-child(1) {
   background-repeat: no-repeat;
   background: linear-gradient(180deg, rgba(213, 230, 224, 1) 0%, rgba(228, 238, 227, 1) 100%);
   background-color: #D5E6E0CC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100vh;
 }
 
 section:nth-child(2) {
   position: relative;
-}
-
-/**************/
-
-#first {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .title-content {
@@ -107,12 +103,11 @@ section:nth-child(2) {
 }
 
 .title-content .title {
-  background-image: url('../img/title.png') !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain !important;
-  color: #006241;
-  height: 164px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url("../img/mask-trees.png");
+  background-attachment: fixed;
+  font-size: 180px;
   width: auto;
 }
 
@@ -150,7 +145,7 @@ section:nth-child(2) {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   mix-blend-mode: multiply;
   opacity: 1;
   width: 100%;
@@ -341,7 +336,7 @@ section#footer {
     line-height: 95px;
   }
   .title-content .title {
-    height: 154px;
+    font-size: 150px;
   }
   .title-content .hashtag {
     font-size: 27px;
@@ -402,12 +397,13 @@ section#footer {
     line-height: 0px;
   }
   .title-content .title {
-    height: 100px;
+    padding-top: 20px;
+    font-size: 54px;
   }
   .title-content .hashtag {
     font-size: 20px;
-    line-height: 0px;
-    padding-top: 5px;
+    line-height: 25px;
+    padding-top: 0;
     text-align: center;
   }
   .footer {
