@@ -108,6 +108,7 @@ section:nth-child(2) {
   -webkit-text-fill-color: transparent;
   background-image: url("../img/mask-trees.png");
   background-attachment: fixed;
+  background-size: cover;
   font-size: 180px;
   width: auto;
 }
