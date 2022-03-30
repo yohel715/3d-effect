@@ -103,6 +103,7 @@ section:nth-child(2) {
 }
 
 .title-content .title {
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: url("../img/mask-trees.png");
