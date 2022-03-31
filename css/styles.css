@@ -455,7 +455,7 @@ section#footer {
 @media screen and (max-width: 768px) {
   .title-content {
     width: 93%;
-    padding-top: 40px;
+    margin-top: 20px;
   }
   .title-content .hashtag {
     font-family: 'SoDoSans-Regular';  
@@ -489,23 +489,27 @@ section#footer {
     padding-top: 0;
   }
   .footer {
-    padding: 0px 30px 50px;
-    height: 310px;
-    flex-direction: column;
-    align-items: center;
+    padding: 0px 14px 60px;
+    height: 237.18px;
+    flex-direction: row;
+    align-items: flex-end;
     justify-content: end;
   }
   .footer .social-media {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+  .footer .social-media img {
+    width: 20px;
+    height: 20px;
   }
   .footer p {
-    text-align: center;
+    text-align: start;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 18px;
   }
   .footer .starbuck-logo {
-    width: 90px;
-    height: 91px;
+    width: 67px;
+    height: 67px;
   }
 }
 
