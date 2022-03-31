@@ -457,6 +457,13 @@ section#footer {
     width: 93%;
     padding-top: 40px;
   }
+  .title-content .hashtag {
+    font-family: 'SoDoSans-Regular';  
+    font-size: 26px;
+    line-height: 42px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
   .hashtag-content {
     margin: 20px 0 10px;
     padding-bottom: 5px;
