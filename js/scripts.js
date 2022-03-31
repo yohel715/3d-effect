@@ -77,14 +77,14 @@ var detailsElement = document.querySelectorAll('.details-cup-content .row .detai
 mainElement.addEventListener("scroll", function () {
   const direction = lastScrollTop > this.scrollTop ? 1 : -1;
   lastScrollTop = mainElement.scrollTop;
-  object.rotation.y += 0.11 * direction; //rotate the object
+  object.rotation.y += 0.111 * direction; //rotate the object
   
   //get the amount of pixels the user has scrolled
   const scrollAmount = mainElement.scrollTop;
   const windowHeight = window.innerHeight; //height of the window
   const mainElementHeight = mainElement.scrollHeight; //height of the main element
   const scrollPercentage = scrollAmount / (mainElementHeight - windowHeight);//percentage of the scroll  
-  // console.log(scrollPercentage);
+  console.log(scrollPercentage);
 
   if (scrollPercentage >= 0.5) {
     canvaElement.style.position = "inherit";
