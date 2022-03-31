@@ -416,17 +416,18 @@ section#footer {
 @media screen and (max-width: 1300px) {
   .title-content {
     padding-top: 54px;
-    width: 58%;
+    width: 67%;
   }
   .title-content .subtitle {
-    font-size: 67px;
+    font-size: 75px;
     line-height: 95px;
   }
   .title-content .title {
-    font-size: 120px;
+    font-size: 144px;
+    line-height: 190px;
   }
   .title-content .hashtag {
-    font-size: 27px;
+    font-size: 22px;
     line-height: 5px;
     padding-top: 20px;
   }
