@@ -455,7 +455,7 @@ section#footer {
 @media screen and (max-width: 768px) {
   .title-content {
     width: 93%;
-    padding: 17px;
+    padding-top: 40px;
   }
   .hashtag-content {
     margin: 20px 0 10px;
