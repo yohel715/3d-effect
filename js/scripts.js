@@ -96,3 +96,9 @@ mainElement.addEventListener("scroll", function () {
 });
 
 render();
+
+//if the screen is smaller than 480px, get the element by id "#detail04" and remove the break lines in the html
+if (window.innerWidth <= 480) {
+  const detail04 = document.getElementById("detail04");
+  detail04.innerHTML = detail04.innerHTML.replace(/<br>/g, "");
+}
