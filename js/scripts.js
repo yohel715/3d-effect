@@ -77,14 +77,16 @@ var detailsElement = document.querySelectorAll('.details-cup-content .row .detai
 mainElement.addEventListener("scroll", function () {
   const direction = lastScrollTop > this.scrollTop ? 1 : -1;
   lastScrollTop = mainElement.scrollTop;
-  object.rotation.y += 0.111 * direction; //rotate the object
-  
   //get the amount of pixels the user has scrolled
   const scrollAmount = mainElement.scrollTop;
   const windowHeight = window.innerHeight; //height of the window
   const mainElementHeight = mainElement.scrollHeight; //height of the main element
   const scrollPercentage = scrollAmount / (mainElementHeight - windowHeight);//percentage of the scroll  
-  console.log(scrollPercentage);
+  // console.log(scrollPercentage);
+
+  if (scrollPercentage <= 0.5) {
+    object.rotation.y += 0.178 * direction; //rotate the object
+  }
 
   if (scrollPercentage >= 0.5) {
     canvaElement.style.position = "inherit";
@@ -102,3 +104,28 @@ if (window.innerWidth <= 480) {
   const detail04 = document.getElementById("detail04");
   detail04.innerHTML = detail04.innerHTML.replace(/<br>/g, "");
 }
+
+//Progress bar
+const progressBarFull = document.getElementById('progressBarFull');
+function getFromAPI(url, callback){
+  var obj;
+  fetch(url)
+    .then(res => res.json())
+    .then(data => obj = data)
+    .then(() => callback(obj))
+};
+
+getFromAPI('https://opensheet.elk.sh/1uk-DfBya4xDh5roFCh46gxnuqWM2MHHoTW12cJp-Wf8/Sheet1', getData);
+
+function getData(arrOfObjs){
+  var results = "";
+  arrOfObjs.forEach( (x) => {
+    // results += "<div class='metaindicator'> Meta: " + x.Meta + "</div>"
+    results += "<div class='progressindicator'> " + x.Progreso + "<br/> <span>árboles donados</span> </div>"
+    let questionCounter = x.Progreso;
+    let MAX_QUESTIONS = x.Meta;
+    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+  })
+  results += "";
+  document.getElementById("progressBarFull").innerHTML = results;
+};

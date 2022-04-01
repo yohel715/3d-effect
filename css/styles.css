@@ -597,3 +597,76 @@ section#footer {
     transform: translateY(-4px);
   }
 }
+
+.container-progressBar {
+  width: 1024vw;
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: transparent;
+  position: relative;
+  top: 275px;
+  z-index: 9;
+}
+
+.container-progressBar > * {
+  width: 100%;
+}
+
+#progressBar {
+  background-color: #fff;
+  border-radius: 50px;
+  border: none;
+  height: 8px;
+  margin-top: 1.5rem;
+  width: 1024px;
+}
+
+#progressBarFull {
+  background-color: #EED350;
+  border-radius: 50px;
+  height: 8px;
+  width: 0%;
+  position: relative;
+}
+
+.progressindicator {
+  color: #006241;
+  background-image: url('../img/outline-booble.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border-radius: 100px;
+  height:  170px;
+  width: 170px;
+  /* font */
+  font-family: "Pike-Bold";
+  font-size: 45px;
+  line-height: 30px;
+  text-align: center;
+  padding-top: 20px;
+  /* display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* position */
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  z-index: 10;
+}
+
+.progressindicator span {
+  font-size: 14px !important;
+}
+
+.metaindicator {
+  /* max-width: 1024px; */
+  display: none;
+}
