@@ -89,6 +89,7 @@ section:nth-child(1) {
   flex-direction: column;
   align-items: center;
   max-height: 100vh;
+  position: relative;
 }
 
 section:nth-child(2) {
@@ -156,8 +157,8 @@ section:nth-child(2) {
   background-image: url("../img/arboles.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
+  background-size: contain;
+  min-height: 60vh;
   mix-blend-mode: multiply;
   opacity: 1;
   width: 100%;
@@ -396,16 +397,15 @@ section#footer {
 /* progress bar */
 .container-progressBar {
   width: 1024vw;
-  min-height: 5vh;
+  min-height: 21vh;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 2rem;
   background-color: transparent;
-  position: relative;
-  top: 275px;
+  position: absolute;
+  bottom: 0;
   z-index: 10;
 }
 
@@ -489,8 +489,6 @@ section#footer {
   }
   .container-progressBar {
     width: 90vw !important;
-    min-height: 28vh;
-    padding: 0;
   }
   .progressindicator {
     height:  130px;
