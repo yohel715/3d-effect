@@ -98,14 +98,14 @@ mainElement.addEventListener("scroll", function () {
 
 render();
 
-//if the screen is smaller than 480px, get the element by id "#detail04" and remove the break lines in the html
+//if the screen is smaller than 480px, remove the break lines in the html
 if (window.innerWidth <= 480) {
-  const details = document.querySelectorAll('.details-cup-content .row .detail');
+  const details = document.getElementsByClassName(' .detail p');
   //remove the break lines
-  details.forEach( (details) => {
-    details.innerHTML = details.innerHTML.replace(/<br>/g, "");
+  details.forEach( (detail) => {
+    detail.innerHTML.replace(/<br>/g, "");
   });
-}
+};
 
 //Progress bar
 const progressBarFull = document.getElementById('progressBarFull');

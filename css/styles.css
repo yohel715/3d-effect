@@ -559,7 +559,7 @@ section#footer {
 
 @media screen and (max-width: 768px) {
   .title-content {
-    width: 93%;
+    width: 90%;
     margin-top: 10px;
     padding: 0;
   }
@@ -568,15 +568,85 @@ section#footer {
     line-height: 125px;
   }
   .title-content .title {
-    font-size: 120px;
+    font-size: 110px;
     line-height: 110px;
   }
   .title-content .hashtag {
     font-family: 'SoDoSans-Regular';  
-    font-size: 20px;
+    font-size: 18px;
     line-height: 42px;
     letter-spacing: 0.02em;
   }
+  #progressBar {
+    width: 90vw !important;
+  }
+  #progressBar::after {
+    width: 690px !important;
+    height: 40px !important;
+    top: -44px;
+  }
+  #progressBarFull::after {
+    top: -36px;
+    height: 40px !important;
+  }
+  .hashtag-content {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .hashtag-content h4 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .hashtag-content h4::after {
+    height: 50px;
+    width: 90%;
+  }
+  .hashtag-content p {
+    font-size: 16px;
+    line-height: 24px;
+    width: 80%;
+    text-align: left;
+  }
+  .footer {
+    min-height: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .footer div {
+    padding: 0px 0px 30px;
+    margin: 70px 0 0 0;
+    width: 80%;
+  }
+  .footer p {
+    text-align: start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title-content {
+    margin-top: 60px;
+  }
+  .title-content .subtitle {
+    font-size: 28px;
+    line-height: 0px;
+  }
+  .title-content .title {
+    padding-top: 20px;
+    font-size: 50px;
+    line-height: 120px;
+  }
+  .title-content .hashtag {
+    font-size: 20px;
+    line-height: 25px;
+    padding-top: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+  .container-progressBar {
+    width: 80vw !important;
+    padding: 0;
+  }
+
   .container-progressBar {
     width: 90vw !important;
     padding: 0;
@@ -612,7 +682,8 @@ section#footer {
     bottom: -50px;
   }
   .hashtag-content {
-    padding-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .hashtag-content h4 {
     font-size: 25px;
@@ -624,17 +695,11 @@ section#footer {
     height: 20px;
     width: 90%;
   }
-  .hashtag-content p {
-    font-size: 16px;
-    line-height: 24px;
-    width: 80%;
-    text-align: left;
-  }
   .details-cup-content {
-    top: 32%;
+    top: 30%;
+    width: 80%;
   }
-  .details-cup-content .row:nth-child(1) #detail01,
-  .details-cup-content .row:nth-child(1) #detail02 {
+  .detail {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -643,80 +708,13 @@ section#footer {
   } */
   .details-cup-content .detail p {
     font-size: 14px !important;
+    line-height: 19px;
   }
   .details-cup-content #detail04 {
     padding-top: 0;
   }
-  .footer {
-    min-height: 0px;
-  }
-  .footer div {
-    align-items: center;
-    flex-direction: column-reverse;
-    justify-content: center;
-    padding: 0px 20px 30px;
-    margin: 70px 0 0 0;
-  }
-  .footer .social-media {
-    justify-content: flex-start;
-  }
-  .footer .social-media img {
-    width: 20px;
-    height: 20px;
-  }
-  .footer p {
-    text-align: start;
-    font-size: 14px;
-    line-height: 18px;
-  }
-  .footer .starbuck-logo {
-    width: 67px;
-    height: 67px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .title-content {
-    margin-top: 60px;
-  }
-  .title-content .subtitle {
-    font-size: 28px;
-    line-height: 0px;
-  }
-  .title-content .title {
-    padding-top: 20px;
-    font-size: 50px;
-    line-height: 120px;
-  }
-  .title-content .hashtag {
-    font-size: 20px;
-    line-height: 25px;
-    padding-top: 0;
-    padding-left: 0;
-    text-align: center;
-  }
-  .container-progressBar {
-    width: 80vw !important;
-    padding: 0;
-  }
-  .details-cup-content {
-    width: 90%;
-  }
-  .details-cup-content .row:nth-child(1) #detail01 {
-    padding-right: 40px;
-  }
-  .details-cup-content .row:nth-child(1) #detail02 {
-    padding-left: 40px;
-  }
-  .details-cup-content p {
-    font-size: 16px !important;
-    line-height: 19px;
-  }
   .details-cup-content #detail01 {
     bottom: 95px;
-  }
-  .details-cup-content #detail03 {
-    width: 40%;
   }
   .details-cup-content #detail04 {
     margin-top: 60px;
@@ -729,22 +727,39 @@ section#footer {
   }
   .details-cup-content #detail01,
   .details-cup-content #detail03 {
-    padding-right: 0px;
     text-align: start;
   }
   .details-cup-content #detail02,
   .details-cup-content #detail04 {
-    padding-left: 0px;
     text-align: end;
   }
   .footer {
-    margin-bottom: 0px;
+    min-height: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .footer div {
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .footer p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .footer .starbuck-logo {
+    width: 67px;
+    height: 67px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .details-cup-content p {
     font-size: 12px !important;
+  }
+  .details-cup-content {
+    top: 30%;
+    width: 95%;
   }
 }
 
