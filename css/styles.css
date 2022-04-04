@@ -153,12 +153,12 @@ section:nth-child(2) {
 
 .trees {
   position: absolute;
-  bottom: -110px;
+  bottom: -165px;
   background-image: url("../img/arboles.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 110%;
+  min-height: 75%;
   mix-blend-mode: multiply;
   opacity: 1;
   width: 100%;
@@ -500,6 +500,9 @@ section#footer {
   .title-content .title {
     font-size: 140px;
     line-height: 190px;
+  }
+  .trees {
+    min-height: 100%;
   }
 }
 
