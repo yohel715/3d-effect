@@ -58,7 +58,7 @@ body {
 
 main {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   /* scroll-snap-points-y: repeat(100vh); */
   overflow-y: scroll;
   max-height: 100vh;
@@ -233,15 +233,15 @@ section:nth-child(2) {
 }
 
 .details-cup-content #detail01::after {
-  top: -120px;
-  left: 60px;
+  top: -130px;
+  left: 200px;
   width: 154px;
   height: 85px;
   background-image: url("../img/arrow01.svg");
 }
 
 .details-cup-content #detail02::after {
-  top: -95px;
+  top: -110px;
   right: 100px;
   width: 152px;
   height: 66px;
@@ -322,18 +322,23 @@ section#footer {
 
 .footer {
   background-image: url("../img/footer-bg.svg");
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  height: auto;
+  min-height: 310px;
+  width: 100%;
+}
+
+.footer div {
+  align-content: flex-end;
+  align-items: baseline;
   color: white;
-  padding: 0px 122px;
-  width: auto;
-  height: 308px;
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0;
+  margin: 120px 0 0 0;
+  padding: 0px 122px;
 }
 
 .footer p {
@@ -343,7 +348,7 @@ section#footer {
   text-align: center;
 }
 
-.footer .social-media {
+/* .footer .social-media {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -367,7 +372,7 @@ section#footer {
 
 .footer .social-media li:last-of-type {
   padding-right: 0px;
-}
+} */
 
 .footer .starbuck-logo {
   width: 125px;
@@ -710,6 +715,7 @@ section#footer {
 }
 
 .loader {
+  display: none !important;
   position: fixed;
   top: 0;
   left: 0;

@@ -133,6 +133,7 @@ function getData(arrOfObjs){
 * loading
 */
 
+/*
 function onReady(callback) {
   var intervalID = window.setInterval(checkReady, 2000);
 
@@ -152,7 +153,7 @@ onReady(function () {
    show('page', true);
    show('loading', false);
 });
-
+*/
 
 // document.documentElement.addEventListener("load", function(){
 //   document.getElementById("loading").style.display = "block";
