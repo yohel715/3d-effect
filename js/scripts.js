@@ -41,8 +41,13 @@ var object;
 loader.load("assets/vaso.gltf", function (gltf) { //load the gltf file
     object = gltf.scene; //get the scene from the gltf file
     object.scale.set(0.9, 0.9, 0.9); //scale the object, X, Y, Z
-    object.position.set(0, -5.5, 0) //position the object, X, Y, Z
-    object.rotation.set(0.3, 4.7, 0) //rotate the object, X, Y, Z
+    if (window.innerWidth <= 425 && window.innerHeight <= 875) {
+      object.position.set(0, -4.3, 0) //position the object, X, Y, Z
+      object.rotation.set(0.35, 4.7, 0) //rotate the object, X, Y, Z
+    } else {
+      object.position.set(0, -5.5, 0) //position the object, X, Y, Z
+      object.rotation.set(0.3, 4.7, 0) //rotate the object, X, Y, Z
+    }
     scene.add(gltf.scene); //add the object to the scene
     render();
 });

@@ -59,7 +59,7 @@ body {
 main {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  /* scroll-snap-points-y: repeat(100vh); */
+  /* scroll-snap-points-y: repeat(40vh); */
   overflow-y: scroll;
   max-height: 100vh;
   background-image: url("../img/background_paper.svg");
@@ -165,38 +165,50 @@ section:nth-child(2) {
   z-index: 3;
 }
 
-/**** second section *****/
+/**** second section  *****/
 .details-cup-content {
   position: absolute;
-  display: block;
-  top: 40%;
-  width: 100%;
+  top: 20%;
 }
 
 .details-cup-content .row {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.details-cup-content .row .detail {
-  display: flex;
-  flex-direction: column;
-  z-index: 4;
 }
 
 .details-cup-content .row .detail p {
   font-family: "SoDoSans-Regular";
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.01em;
 }
 
+.details-cup-content .row:nth-child(1) {
+  margin-bottom: 50vh;
+}
+
 .details-cup-content #detail01,
-.details-cup-content #detail02 {
-  padding-bottom: 150px;
+.details-cup-content #detail02,
+.details-cup-content #detail03,
+.details-cup-content #detail04 {
   position: relative;
 }
 
+.details-cup-content #detail01 {
+  bottom: 20px;
+}
+
+.details-cup-content #detail02 {
+  left: 15px;
+  bottom: 10px;
+  text-align: end;
+}
+
+.details-cup-content #detail04 {
+  text-align: end;
+  padding-left: 55px;
+}
+
+
+/****
 .details-cup-content #detail01,
 .details-cup-content #detail03 {
   padding-right: 150px;
@@ -220,6 +232,7 @@ section:nth-child(2) {
 .details-cup-content #detail04 {
   padding-top: 20px;
 }
+*****/
 
 .details-cup-content #detail01::after,
 .details-cup-content #detail02::after,
@@ -230,15 +243,17 @@ section:nth-child(2) {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  display: block;
 }
 
-.details-cup-content #detail01::after {
-  top: -130px;
-  left: 200px;
+/* .details-cup-content #detail01::after {
+  top: 0px;
+  left: 0px;
   width: 154px;
   height: 85px;
   background-image: url("../img/arrow01.svg");
-}
+  transform: rotate(0deg);
+} */
 
 .details-cup-content #detail02::after {
   top: -110px;
@@ -549,12 +564,12 @@ section#footer {
   .hashtag-content p {
     width: 80%;
   }
-  .details-cup-content #detail01::after {
+  /*.details-cup-content #detail01::after {
     height: 40px;
   }
   .details-cup-content #detail03::after {
     height: 110px;
-  }
+  }*/
 }
 
 @media screen and (max-width: 768px) {
@@ -593,7 +608,7 @@ section#footer {
     min-height: 75%;
     bottom: -65px;
   }
-  .details-cup-content {
+  /*.details-cup-content {
     top: 40%;
   }
   .details-cup-content #detail01 {
@@ -616,10 +631,10 @@ section#footer {
   }
   .details-cup-content #detail04 {
     padding: 0;
-  }
+  }*/
   .hashtag-content {
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .hashtag-content h4 {
     font-size: 40px;
@@ -674,7 +689,6 @@ section#footer {
     width: 80vw !important;
     padding: 0;
   }
-
   .container-progressBar {
     width: 90vw !important;
     padding: 0;
@@ -707,11 +721,7 @@ section#footer {
   }
   .trees {
     min-height: 50%;
-    bottom: -50px;
-  }
-  .hashtag-content {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    bottom: -90px;
   }
   .hashtag-content h4 {
     font-size: 25px;
@@ -723,43 +733,81 @@ section#footer {
     height: 20px;
     width: 90%;
   }
+  /* details */
   .details-cup-content {
-    top: 30%;
-    width: 80%;
+    position: absolute;
+    top: 15%;
+    width: 90%;
   }
-  .detail {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  
+  .details-cup-content .row {
+    display: flex;
   }
-  /* .details-cup-content .detail {
-    width: 100% !important;
-  } */
-  .details-cup-content .detail p {
-    font-size: 14px !important;
-    line-height: 19px;
+  
+  .details-cup-content .row .detail p {
+    font-family: "SoDoSans-Regular";
+    font-size: 16px;
+    letter-spacing: 0.01em;
   }
-  .details-cup-content #detail04 {
-    padding-top: 0;
+  
+  .details-cup-content .row:nth-child(1) {
+    margin-bottom: 40vh;
   }
-  .details-cup-content #detail01 {
-    bottom: 95px;
-  }
-  .details-cup-content #detail04 {
-    margin-top: 60px;
-  }
-  .details-cup-content #detail01::after,
-  .details-cup-content #detail02::after,
-  .details-cup-content #detail03::after,
-  .details-cup-content #detail04::after {
-    display: none;
-  }
+  
   .details-cup-content #detail01,
-  .details-cup-content #detail03 {
-    text-align: start;
-  }
   .details-cup-content #detail02,
+  .details-cup-content #detail03,
+  .details-cup-content #detail04 {
+    position: relative;
+  }
+  
+  .details-cup-content #detail01 {
+    bottom: 20px;
+  }
+  
+  .details-cup-content #detail02 {
+    left: 15px;
+    bottom: 10px;
+    text-align: end;
+  }
+  
   .details-cup-content #detail04 {
     text-align: end;
+    padding-left: 55px;
+  }
+  .details-cup-content #detail01::after {
+    top: 0px;
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    background-image: url("../img/arrow02.svg");
+    transform: rotate(270deg);
+  }
+  .details-cup-content #detail02::after {
+    top: 0px;
+    left: 75px;
+    width: 80px;
+    height: 70px;
+    background-image: url("../img/arrow01.svg");
+    transform: rotate(120deg);
+  }
+  .details-cup-content #detail03::after {
+    top: -200px;
+    left: 20px;
+    width: 75px;
+    height: 110px;
+    background-image: url(../img/arrow03.svg);
+  }
+  .details-cup-content #detail04::after {
+    top: -150px;
+    left: 20px;
+    width: 170px;
+    height: 55px;
+    background-image: url("../img/arrow04.svg");
+  }
+  /* end details */
+  section#footer {
+    justify-content: space-between;
   }
   .footer {
     min-height: 0px;
@@ -785,10 +833,10 @@ section#footer {
   .details-cup-content p {
     font-size: 12px !important;
   }
-  .details-cup-content {
+  /*.details-cup-content {
     top: 35%;
     width: 95%;
-  }
+  }*/
 }
 
 
@@ -801,7 +849,7 @@ section#footer {
   }
 }
 
-.loader {
+/* .loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -812,9 +860,51 @@ section#footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.loader img {
+/* .loader img {
   height: 120px;
   width: 120px;
+} */
+
+#loading{
+  background-color: #006341;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #006341; /* green */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  /* position: absolute;
+  top: 40%;
+  left: 45%; */
+  transform: translate(-45%, -45%);
+}
+.logo{
+  background-image: url("https://logos-marcas.com/wp-content/uploads/2020/09/Starbucks-Logo-650x366.png");
+  background-size: 150%;
+  background-position: 50% 50%;
+  width: 120px;
+  height: 120px;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* top: 40%;
+  left: 45%;  */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
