@@ -100,8 +100,11 @@ render();
 
 //if the screen is smaller than 480px, get the element by id "#detail04" and remove the break lines in the html
 if (window.innerWidth <= 480) {
-  const detail04 = document.getElementById("detail04");
-  detail04.innerHTML = detail04.innerHTML.replace(/<br>/g, "");
+  const details = document.querySelectorAll('.details-cup-content .row .detail');
+  //remove the break lines
+  details.forEach( (details) => {
+    details.innerHTML = details.innerHTML.replace(/<br>/g, "");
+  });
 }
 
 //Progress bar
@@ -133,7 +136,6 @@ function getData(arrOfObjs){
 * loading
 */
 
-/*
 function onReady(callback) {
   var intervalID = window.setInterval(checkReady, 2000);
 
@@ -153,7 +155,6 @@ onReady(function () {
    show('page', true);
    show('loading', false);
 });
-*/
 
 // document.documentElement.addEventListener("load", function(){
 //   document.getElementById("loading").style.display = "block";

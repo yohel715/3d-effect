@@ -489,7 +489,7 @@ section#footer {
   position: absolute;
   bottom: -80px;
   right: -80px;
-  z-index: 7;
+  z-index: 15;
 }
 
 .progressindicator span {
@@ -534,7 +534,7 @@ section#footer {
     line-height: 20px;
     padding-top: 10px;
     bottom: -60px;
-    right: -60px;
+    right: -65px;
   }
   .progressindicator span {
     font-size: 12px !important;
@@ -580,13 +580,42 @@ section#footer {
   .container-progressBar {
     width: 90vw !important;
     padding: 0;
+    bottom: 5px;
+  }
+  #progressBar {
+    width: 100%;
+    height: 4px;
+  }
+  #progressBarFull {
+    height: 4px;
+  }
+  #progressBar::after,
+  #progressBarFull::after {
+    height: 20px !important;
+  }
+  #progressBar::after {
+    width: 255px !important;
+    top: -21px;
+    background-image: url("../img/progress-trees-mobile.svg");
+  }
+  #progressBarFull::after {
+    top: -17px;
+    background-image: url("../img/progress-full-trees-mobile.svg");
+  }
+  .progressindicator {
+    height:  130px;
+    width: 130px;
+    bottom: -55px;
+  }
+  .trees {
+    min-height: 50%;
+    bottom: -50px;
   }
   .hashtag-content {
-    margin: 20px 0 10px;
     padding-bottom: 5px;
   }
   .hashtag-content h4 {
-    font-size: 26px;
+    font-size: 25px;
     margin-top: 0px;
     margin-bottom: 0px;
     line-height: 60px;
@@ -599,19 +628,34 @@ section#footer {
     font-size: 16px;
     line-height: 24px;
     width: 80%;
+    text-align: left;
   }
+  .details-cup-content {
+    top: 32%;
+  }
+  .details-cup-content .row:nth-child(1) #detail01,
+  .details-cup-content .row:nth-child(1) #detail02 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  /* .details-cup-content .detail {
+    width: 100% !important;
+  } */
   .details-cup-content .detail p {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
   .details-cup-content #detail04 {
     padding-top: 0;
   }
   .footer {
-    padding: 0px 14px 60px;
-    height: 237.18px;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: end;
+    min-height: 0px;
+  }
+  .footer div {
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 0px 20px 30px;
+    margin: 70px 0 0 0;
   }
   .footer .social-media {
     justify-content: flex-start;
@@ -715,7 +759,6 @@ section#footer {
 }
 
 .loader {
-  display: none !important;
   position: fixed;
   top: 0;
   left: 0;
