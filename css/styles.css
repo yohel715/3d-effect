@@ -589,6 +589,34 @@ section#footer {
     top: -36px;
     height: 40px !important;
   }
+  .trees {
+    min-height: 75%;
+    bottom: -65px;
+  }
+  .details-cup-content {
+    top: 40%;
+  }
+  .details-cup-content #detail01 {
+    bottom: 50px;
+    padding-bottom: 0;
+  }
+  .details-cup-content #detail02 {
+    bottom: 110px;
+    padding-left: 120px;
+    padding-bottom: 60px;
+  }
+  .details-cup-content #detail04::after {
+    right: 30px;
+  }
+  .details-cup-content #detail03 {
+    width: 100% !important; 
+  }
+  .details-cup-content #detail03::after {
+    right: 0px;
+  }
+  .details-cup-content #detail04 {
+    padding: 0;
+  }
   .hashtag-content {
     margin-top: 10px;
     margin-bottom: 30px;
@@ -758,7 +786,7 @@ section#footer {
     font-size: 12px !important;
   }
   .details-cup-content {
-    top: 30%;
+    top: 35%;
     width: 95%;
   }
 }
