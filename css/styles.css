@@ -58,7 +58,7 @@ body {
 
 main {
   scroll-behavior: smooth;
-  /* scroll-snap-type: y mandatory; */
+  scroll-snap-type: y mandatory;
   /* scroll-snap-points-y: repeat(100vh); */
   overflow-y: scroll;
   max-height: 100vh;
