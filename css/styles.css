@@ -626,9 +626,10 @@ section#footer {
     left: -10%;
   }
   .details-cup-content #detail04::after {
-    top: -210%;
-    left: 45%;
-    width: 40%;
+    top: -170%;
+    height: 60% !important;
+    left: 0px;
+    width: 120%;
   }
   .hashtag-content {
     margin-top: auto;
