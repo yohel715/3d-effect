@@ -701,15 +701,15 @@ section#footer {
   }
   #progressBar::after,
   #progressBarFull::after {
-    height: 20px !important;
+    height: 30px !important;
   }
   #progressBar::after {
-    width: 255px !important;
-    top: -21px;
+    width: 100% !important;
+    top: -28px;
     background-image: url("../img/progress-trees-mobile.svg");
   }
   #progressBarFull::after {
-    top: -17px;
+    top: -24px;
     background-image: url("../img/progress-full-trees-mobile.svg");
   }
   .progressindicator {
@@ -721,6 +721,19 @@ section#footer {
     min-height: 50%;
     bottom: -90px;
   }
+  /* info*/
+  .details-cup-content {
+    width: 140% !important;
+    min-height: 86%;
+    top: 13% !important;
+  }
+  .details-cup-content p {
+    font-size: 14px;
+  }
+  .details-cup-content #detail02 {
+    top: -2%;
+  }
+  /* footer */
   .hashtag-content h4 {
     font-size: 25px;
     margin-top: 0px;
@@ -767,6 +780,31 @@ section#footer {
   .footer .starbuck-logo {
     width: 67px;
     height: 67px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* info*/
+  .details-cup-content p {
+    font-size: 12px;
+  }
+  .details-cup-content #detail01::after {
+    width: 50%;
+    height: 60%;
+  }
+  .details-cup-content #detail02 {
+    top: 0%;
+  }
+  .details-cup-content #detail02::after {
+    width: 80%;
+  }
+  .details-cup-content #detail03::after {
+    height: 70%;
+    top: -185%;
+    left: -20%;
+  }
+  .details-cup-content #detail04::after {
+    top: -190%;
   }
 }
 
