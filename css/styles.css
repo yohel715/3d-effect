@@ -702,15 +702,15 @@ section#footer {
   }
   #progressBar::after,
   #progressBarFull::after {
-    height: 30px !important;
+    height: 23px !important;
   }
   #progressBar::after {
     width: 100% !important;
-    top: -28px;
+    top: -24px;
     background-image: url("../img/progress-trees-mobile.svg");
   }
   #progressBarFull::after {
-    top: -24px;
+    top: -20px;
     background-image: url("../img/progress-full-trees-mobile.svg");
   }
   .progressindicator {
