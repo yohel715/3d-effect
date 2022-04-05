@@ -499,7 +499,6 @@ section#footer {
     font-size: 22px;
     line-height: 24px;
   }
-  
   .details-cup-content #detail03 {
     bottom: 40px;
   }
@@ -604,6 +603,32 @@ section#footer {
   .trees {
     min-height: 75%;
     bottom: -65px;
+  }
+  /* info*/
+  .details-cup-content p {
+    font-size: 18px;
+  }
+  .details-cup-content #detail01::after {
+    width: 80%;
+    height: 60%;
+    top: 30%;
+  }
+  .details-cup-content #detail02 {
+    top: -5%;
+  }
+  .details-cup-content #detail02::after {
+    height: 35%;
+    top: 45%;
+  }
+  .details-cup-content #detail03::after {
+    height: 100%;
+    top: -215%;
+    left: -10%;
+  }
+  .details-cup-content #detail04::after {
+    top: -210%;
+    left: 45%;
+    width: 40%;
   }
   .hashtag-content {
     margin-top: auto;
