@@ -88,8 +88,8 @@ mainElement.addEventListener("scroll", function () {
   const scrollPercentage = scrollAmount / (mainElementHeight - windowHeight);//percentage of the scroll  
   // console.log(scrollPercentage);
 
-  if (scrollPercentage <= 0.5) {
-    object.rotation.y += 0.179 * direction; //rotate the object
+  if (scrollPercentage < 0.5) {
+    object.rotation.y += 0.169 * direction; //rotate the object
   }
 
   if (scrollPercentage >= 0.5) {
