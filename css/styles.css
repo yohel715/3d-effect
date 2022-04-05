@@ -726,6 +726,7 @@ section#footer {
     width: 140% !important;
     min-height: 86%;
     top: 13% !important;
+    z-index: 20;
   }
   .details-cup-content p {
     font-size: 14px;
