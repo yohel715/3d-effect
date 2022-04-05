@@ -496,7 +496,7 @@ section#footer {
   }
   /* info*/
   .details-cup-content p {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 24px;
   }
   
@@ -538,6 +538,34 @@ section#footer {
   }
   .hashtag-content p {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title-content .title {
+    font-size: 116px;
+    line-height: 190px;
+  }
+  #progressBar::after {
+    width: 690px !important;
+    height: 40px !important;
+    top: -44px;
+  }
+  #progressBarFull::after {
+    top: -36px;
+    height: 40px !important;
+  }
+  .details-cup-content #detail01::after {
+    width: 80%;
+    height: 90%;
+  }
+  .details-cup-content #detail03::after {
+    height: 153%;
+    left: 0%;
+    top: -270%;
+  }
+  .details-cup-content #detail04::after {
+    left: 40%;
   }
 }
 
