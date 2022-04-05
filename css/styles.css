@@ -265,6 +265,8 @@ section#footer {
   align-content: flex-start;
   justify-content: center;
   width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .hashtag-content h4 {
@@ -306,7 +308,7 @@ section#footer {
 
 .footer {
   background-image: url("../img/footer-bg.svg");
-  background-position: center bottom;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
@@ -457,6 +459,19 @@ section#footer {
   display: none;
 }
 
+@media screen and (min-width: 1880px) {
+  .title-content {
+    width: 50%;
+    padding-top: 90px;
+  }
+  .title-content .title {
+    line-height: 230px;
+  }
+  .title-content .hashtag {
+    padding-left: 130px;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .title-content .title {
     font-size: 140px;
@@ -534,7 +549,8 @@ section#footer {
   }
   /* end info */
   .hashtag-content {
-    margin-bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .hashtag-content h4 {
     margin-top: 20px;
