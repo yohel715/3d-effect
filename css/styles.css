@@ -1,20 +1,20 @@
 /* import all @font-face from ../assets/fonts/landerwebdesktop/lander */
 @font-face {
-  font-family: "LanderShort-Bold";
+  font-family: "LanderGrande-Bold";
   src: url("../assets/fonts/landerwebdesktop/LanderWebFonts/LanderGrande-Bold.woff");
   font-weight: 700, Bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "LanderShort-Regular";
+  font-family: "LanderGrande-Regular";
   src: url("../assets/fonts/landerwebdesktop/LanderWebFonts/LanderGrande-Regular.woff");
   font-weight: 400, Regular;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "LanderShort-Light";
+  font-family: "LanderGrande-Light";
   src: url("../assets/fonts/landerwebdesktop/LanderWebFonts/LanderGrande-Light.woff");
   font-weight: "light";
   font-style: normal;
@@ -105,7 +105,7 @@ section:nth-child(2) {
 
 .title-content .title,
 .title-content .subtitle {
-  font-family: "LanderShort-Bold";
+  font-family: "LanderGrande-Bold";
   text-align: center;
   margin: 0;
 }
@@ -114,7 +114,7 @@ section:nth-child(2) {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: url("../img/mask-trees.png");
+  background-image: url("../img/mask-trees.jpg");
   background-attachment: fixed;
   background-size: cover;
   font-size: 180px;
@@ -676,6 +676,8 @@ section#footer {
     padding-top: 20px;
     font-size: 50px;
     line-height: 120px;
+    background-attachment: unset;
+    background-position: center top;
   }
   .title-content .hashtag {
     font-size: 20px;
