@@ -477,6 +477,33 @@ section#footer {
   top: 4px;
 }
 
+@media screen and (min-width: 1441px) {
+  .title-content {
+    padding-top: 80px;
+    width: 60%;
+  }
+  #progressBar::after {
+    top: -64px;
+  }
+  #progressBarFull::after {
+    top: -56px;
+  }
+  .details-cup-content #detail01::after {
+    height: 170%;
+  }
+  .details-cup-content #detail03::after {
+    height: 250%;
+    top: -365%;
+  }
+  .details-cup-content #detail04::after {
+    width: unset !important;
+    height: 130%;
+    top: -265%;
+    left: 0;
+    background-image: url(../img/arrow04.svg);
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .title-content {
     padding-top: 20px;
@@ -575,7 +602,6 @@ section#footer {
     line-height: 190px;
   }
   #progressBar::after {
-    width: 690px !important;
     height: 40px !important;
     top: -44px;
   }
@@ -620,21 +646,19 @@ section#footer {
     line-height: 42px;
     letter-spacing: 0.02em;
   }
-  #progressBar {
-    width: 90vw !important;
+  #progressBar::after,
+  #progressBarFull::after {
+    height: 27px !important;
   }
   #progressBar::after {
-    width: 100%;
-    height: 40px !important;
-    top: -44px;
+    top: -33px;
   }
   #progressBarFull::after {
-    top: -36px;
-    height: 40px !important;
+    top: -26px;
   }
   .trees {
     min-height: 80%;
-    bottom: -90px;
+    bottom: -130px;
   }
   /* info*/
   .details-cup-content #detail01,
