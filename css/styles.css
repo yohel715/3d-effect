@@ -144,6 +144,112 @@ section:nth-child(2) {
   text-align: start;
 }
 
+.hashtag-link {
+  color: #000;
+  text-decoration: none;
+}
+.hashtag-link:hover {
+  color: #0F7D55;
+  cursor: pointer;
+}
+.hashtag-link:active {
+  color: #0F7D66;
+}
+
+.hashtag .hashtag-link {
+  color: #006241 !important;
+}
+
+/* progress bar */
+.container-progressBar {
+  width: 1024vw;
+  min-height: 21vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+#progressBar {
+  background-color: #fff;
+  border-radius: 50px;
+  border: none;
+  height: 8px;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+#progressBarFull {
+  background-color: #EED350;
+  border-radius: 50px;
+  height: 8px;
+  width: 0%;
+  position: relative;
+}
+
+#progressBar::after,
+#progressBarFull::after {
+  display: block;
+  content: "";
+  position: relative;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 4vw !important;
+}
+
+#progressBar::after {
+  top: -56px;
+  height: 4vw !important;
+  background-image: url("../img/progress-trees.svg");
+  z-index: 10;
+}
+
+#progressBarFull::after {
+  top: -48px;
+  height: 4vw !important;
+  background-image: url("../img/progress-full-trees.svg");
+  z-index: 11;
+}
+
+.progressindicator {
+  color: #006241;
+  background-image: url('../img/outline-booble.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border-radius: 100px;
+  height:  170px;
+  width: 170px;
+  /* font */
+  font-family: "Pike-Bold";
+  font-size: 45px;
+  line-height: 30px;
+  text-align: center;
+  padding-top: 20px;
+  /* display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* position */
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  z-index: 15;
+}
+
+.progressindicator span {
+  font-size: 14px !important;
+}
+
 .container-trees {
   position: relative;
   display: block;
@@ -356,123 +462,6 @@ section#footer {
   width: 90% !important;
   z-index: 9;
   top: 4px;
-}
-
-/* progress bar */
-.container-progressBar {
-  width: 1024vw;
-  min-height: 21vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 90%;
-  margin: 0 auto;
-  background-color: transparent;
-  position: absolute;
-  bottom: 0;
-  z-index: 10;
-}
-
-.container-progressBar > * {
-  width: 100%;
-}
-
-#progressBar {
-  background-color: #fff;
-  border-radius: 50px;
-  border: none;
-  height: 8px;
-  margin-top: 1.5rem;
-  width: 100%;
-}
-
-#progressBar::after {
-  display: block;
-  content: "";
-  position: relative;
-  background-position: center left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: -56px;
-  width: auto;
-  height: 4vw !important;
-  background-image: url("../img/progress-trees.svg");
-  z-index: 10;
-}
-
-#progressBarFull {
-  background-color: #EED350;
-  border-radius: 50px;
-  height: 8px;
-  width: 0%;
-  position: relative;
-}
-
-#progressBarFull::after {
-  display: block;
-  content: "";
-  position: relative;
-  background-position: center left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: -48px;
-  width: auto;
-  height: 4vw !important;
-  background-image: url("../img/progress-full-trees.svg");
-  z-index: 11;
-}
-
-.progressindicator {
-  color: #006241;
-  background-image: url('../img/outline-booble.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  border-radius: 100px;
-  height:  170px;
-  width: 170px;
-  /* font */
-  font-family: "Pike-Bold";
-  font-size: 45px;
-  line-height: 30px;
-  text-align: center;
-  padding-top: 20px;
-  /* display */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  /* position */
-  position: absolute;
-  bottom: -80px;
-  right: -80px;
-  z-index: 15;
-}
-
-.progressindicator span {
-  font-size: 14px !important;
-}
-
-.metaindicator {
-  /* max-width: 1024px; */
-  display: none;
-}
-
-.hashtag-link {
-  color: #000;
-  text-decoration: none;
-}
-.hashtag-link:hover {
-  color: #0F7D55;
-  cursor: pointer;
-}
-.hashtag-link:active {
-  color: #0F7D66;
-}
-
-.hashtag .hashtag-link {
-  color: #006241 !important;
 }
 
 @media screen and (max-width: 1280px) {
