@@ -483,10 +483,10 @@ section#footer {
     width: 60%;
   }
   #progressBar::after {
-    top: -64px;
+    top: -77px;
   }
   #progressBarFull::after {
-    top: -56px;
+    top: -69px;
   }
   .details-cup-content #detail01::after {
     height: 170%;
@@ -498,13 +498,13 @@ section#footer {
     left: 30%;
   }
   .details-cup-content #detail03::after {
-    height: 320%;
+    height: 400%;
     top: -570%;
   }
   .details-cup-content #detail04::after {
     width: unset !important;
-    height: 130%;
-    top: -265%;
+    height: 200%;
+    top: -340%;
     left: 0;
     background-image: url(../img/arrow04.svg);
   }
