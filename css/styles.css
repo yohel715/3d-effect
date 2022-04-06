@@ -491,9 +491,15 @@ section#footer {
   .details-cup-content #detail01::after {
     height: 170%;
   }
+  .details-cup-content #detail02::after {
+    width: 30%;
+    height: 97%;
+    top: 90%;
+    left: 30%;
+  }
   .details-cup-content #detail03::after {
-    height: 250%;
-    top: -365%;
+    height: 320%;
+    top: -570%;
   }
   .details-cup-content #detail04::after {
     width: unset !important;
