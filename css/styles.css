@@ -114,9 +114,9 @@ section:nth-child(2) {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: url("../img/mask-trees.jpg");
+  background-image: url("../img/mask-trees.png");
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   font-size: 140px;
   line-height: 190px;
   width: auto;
