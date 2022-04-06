@@ -334,9 +334,9 @@ section#footer {
   text-align: center;
 }
 
-.footer .starbuck-logo {
-  width: 125px;
-  height: 125px;
+.footer img {
+  width: 126px !important;
+  height: auto !important;
 }
 
 /* 3d object */
@@ -530,8 +530,9 @@ section#footer {
     transform: rotate(120deg);
   }
   .details-cup-content #detail03::after {
-    height: 250%;
+    height: 150%;
     left: 10%;
+    top: -250%;
     background-image: url('../img/arrow03.svg');
   }
   .details-cup-content #detail04::after {
@@ -591,6 +592,9 @@ section#footer {
   }
   .details-cup-content #detail04::after {
     left: 40%;
+  }
+  .footer img {
+    width: 110px !important;
   }
 }
 
@@ -688,6 +692,9 @@ section#footer {
   .footer p {
     text-align: start;
   }
+  .footer img {
+    width: 67px !important;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 701px) {
@@ -774,9 +781,9 @@ section#footer {
   }
   /* footer */
   .hashtag-content h4 {
-    font-size: 25px;
+    font-size: 31px;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 16px;
     line-height: 60px;
   }
   .hashtag-content h4::after {
@@ -879,7 +886,7 @@ section#footer {
   transform: translate(-45%, -45%);
 }
 .logo{
-  background-image: url("/img/stb-logo.svg");
+  background-image: url("/img/starbucks-logo.svg");
   background-size: cover;
   background-position: 50% 50%;
   width: 110px;
