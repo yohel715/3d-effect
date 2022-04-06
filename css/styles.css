@@ -822,7 +822,7 @@ section#footer {
   }
   .footer div {
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: row;
     justify-content: center;
   }
   .footer p {
