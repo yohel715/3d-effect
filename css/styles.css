@@ -137,9 +137,9 @@ section:nth-child(2) {
   font-style: normal;
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 25px !important;
+  line-height: 25px;
   margin: 0;
-  padding-top: 0 !important;
+  padding-top: 0;
   padding-left: 25px;
   text-align: start;
 }
@@ -279,7 +279,7 @@ section:nth-child(2) {
   justify-content: center;
   min-height: 80%;
   position: absolute;
-  top: 20%;
+  top: 15%;
   width: 90%;
 }
 
@@ -291,6 +291,14 @@ section:nth-child(2) {
   width: 30%;
 }
 
+.left {
+  padding-right: 5%;
+}
+
+.right {
+  padding-left: 5%;
+}
+
 .details-cup-content p {
   font-family: "SoDoSans-Regular";
   font-size: 24px;
@@ -299,9 +307,14 @@ section:nth-child(2) {
   position: relative;
 }
 
+.details-cup-content #detail01,
+.details-cup-content #detail03 {
+  text-align: end;
+}
+
 .details-cup-content #detail02,
 .details-cup-content #detail04 {
-  text-align: end;
+  text-align: start;
 }
 
 .details-cup-content #detail02 {
@@ -620,10 +633,19 @@ section#footer {
     height: 40px !important;
   }
   .trees {
-    min-height: 75%;
-    bottom: -65px;
+    min-height: 80%;
+    bottom: -90px;
   }
   /* info*/
+  .details-cup-content #detail01,
+  .details-cup-content #detail03 {
+    text-align: start;
+  }
+  
+  .details-cup-content #detail02,
+  .details-cup-content #detail04 {
+    text-align: end;
+  }
   .details-cup-content p {
     font-size: 18px;
   }
@@ -758,10 +780,14 @@ section#footer {
     bottom: -55px;
   }
   .trees {
-    min-height: 50%;
-    bottom: -90px;
+    min-height: 100%;
+    bottom: -100px;
   }
   /* info*/
+  .left,
+  .right { 
+    padding: 0% !important;
+  }
   .details-cup-content {
     width: 140% !important;
     min-height: 86%;
