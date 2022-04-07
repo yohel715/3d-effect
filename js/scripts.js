@@ -3,7 +3,7 @@
  *  so that we can render the scene with camera.
  */
 import { GLTFLoader } from "./GLTFLoader.js";
-import * as THREE from "three";
+import * as THREE from "./three.module.js";
 
 var scene = new THREE.Scene(); //initilize
 var camera = new THREE.PerspectiveCamera(
