@@ -149,16 +149,12 @@ section:nth-child(2) {
 }
 
 .hashtag-link:hover {
-  color: #0F7D66;
+  color: #006241;
   cursor: pointer;
 }
 
 .hashtag .hashtag-link {
-  color: #006241 !important;
-}
-
-.hashtag-link:active {
-  color: #007147;
+  color: #0F7D55 !important;
 }
 
 h4 .hashtag-link {
@@ -552,7 +548,7 @@ section#footer {
     line-height: 24px;
   }
   .details-cup-content #detail03 {
-    bottom: 40px;
+    bottom: 0px;
   }
   .details-cup-content #detail01::after {
     width: 100%;
@@ -705,7 +701,7 @@ section#footer {
     top: -170%;
     height: 60% !important;
     left: 0px;
-    width: 120%;
+    width: 90%;
   }
   .hashtag-content {
     margin-top: auto;
@@ -822,9 +818,10 @@ section#footer {
   .left,
   .right { 
     padding: 0% !important;
+    width: 47% !important;
   }
   .details-cup-content {
-    width: 140% !important;
+    width: 100% !important;
     min-height: 86%;
     top: 13% !important;
     z-index: 20;
