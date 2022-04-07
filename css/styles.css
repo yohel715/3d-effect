@@ -144,19 +144,25 @@ section:nth-child(2) {
 }
 
 .hashtag-link {
-  color: #000;
+  color: #0F7D55;
   text-decoration: none;
 }
+
 .hashtag-link:hover {
-  color: #0F7D55;
-  cursor: pointer;
-}
-.hashtag-link:active {
   color: #0F7D66;
+  cursor: pointer;
 }
 
 .hashtag .hashtag-link {
   color: #006241 !important;
+}
+
+.hashtag-link:active {
+  color: #007147;
+}
+
+h4 .hashtag-link {
+  color: #000 !important;
 }
 
 /* progress bar */
