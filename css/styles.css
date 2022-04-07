@@ -468,7 +468,6 @@ section#footer {
   animation: up-down 1s infinite ease-in-out alternate;
   bottom: 5%;
   pointer-events: none;
-  position: fixed;
   /* The height and width are set using js */
   height: 90% !important;
   width: 90% !important;
