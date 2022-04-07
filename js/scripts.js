@@ -93,7 +93,7 @@ mainElement.addEventListener("scroll", function () {
   }
 
   if (scrollPercentage >= 0.5) {
-    canvaElement.style.position = "inherit";
+    canvaElement.style.position = "static";
   } 
   else if (scrollPercentage <= 0.49) {
     canvaElement.style.position = "fixed";
