@@ -473,6 +473,7 @@ section#footer {
   /* Vaso 3d */
   animation: up-down 1s infinite ease-in-out alternate;
   bottom: 5%;
+  position: fixed;
   pointer-events: none;
   /* The height and width are set using js */
   height: 90% !important;

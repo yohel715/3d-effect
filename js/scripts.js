@@ -134,5 +134,4 @@ document.documentElement.addEventListener("load", function(){
 
 window.onload = function(){
   document.getElementById("loading").style.display = "none";
-  canvaElement.style.position = "fixed";
 }
