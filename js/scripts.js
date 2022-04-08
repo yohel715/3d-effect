@@ -92,11 +92,14 @@ mainElement.addEventListener("scroll", function () {
     object.rotation.y += 0.169 * direction; //rotate the object
   }
 
-  if (scrollPercentage >= 0.5) {
-    canvaElement.style.position = "static";
+  if (scrollPercentage >= 0.30 && scrollPercentage < 0.70) {
     detailsElement.forEach( (detail) => {
       detail.classList.add('fadeIn');
     });
+  }
+
+  if (scrollPercentage >= 0.5) {
+    canvaElement.style.position = "static";
   } 
   else if (scrollPercentage <= 0.49) {
     canvaElement.style.position = "fixed";
