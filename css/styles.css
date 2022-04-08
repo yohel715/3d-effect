@@ -545,10 +545,8 @@ section#footer {
     font-size: 12px !important;
   }
   .trees {
-    bottom: -95px;
-    min-height: 133%;
+    bottom: -120px;
   }
-  /* info*/
   .details-cup-content {
     top: 15%;
   }
@@ -571,7 +569,6 @@ section#footer {
   .details-cup-content #detail04::after {
     height: 75px;
   }
-  /* end info */
   .hashtag-content {
     margin-top: auto;
     margin-bottom: auto;
@@ -738,7 +735,7 @@ section#footer {
   } 
 }
 
-@media screen and (min-width: 376px) and (max-height: 990px) {
+@media screen and (min-width: 376px) and (max-widht:480px ) and (max-height: 990px) {
   .details-cup-content {
     min-height: 80% !important;
   }
