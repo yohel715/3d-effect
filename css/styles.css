@@ -738,9 +738,18 @@ section#footer {
   } 
 }
 
-@media screen and (min-width: 390px) and (min-height: 700px) and (max-width: 480px) and (max-height: 900px) {
+@media screen and (min-width: 376px) and (max-height: 990px) {
   .details-cup-content {
-    min-height: 86% !important;
+    min-height: 80% !important;
+  }
+  .left, .right {
+    padding: 0 10px !important;
+  }
+  .left {
+    margin-right: 40px !important;
+  }
+  .right { 
+    margin-left: 40px !important;
   }
 }
 
@@ -811,7 +820,7 @@ section#footer {
   /* info*/
   .left,
   .right { 
-    padding: 0% 20px !important;
+    padding: 0% 20px;
     width: 47% !important;
   }
   .details-cup-content {
