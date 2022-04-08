@@ -76,7 +76,7 @@ const mainElement = document.querySelector('body > main');
 let lastScrollTop = 0;
 //change the position absolute of the canva element 
 const canvaElement = document.querySelector('.rendered-object > canvas');
-var detailsElement = document.querySelectorAll('.details-cup-content .row .detail');
+var detailsElement = document.querySelectorAll('.detail');
 
 mainElement.addEventListener("scroll", function () {
   const direction = lastScrollTop > this.scrollTop ? 1 : -1;
@@ -94,6 +94,9 @@ mainElement.addEventListener("scroll", function () {
 
   if (scrollPercentage >= 0.5) {
     canvaElement.style.position = "static";
+    detailsElement.forEach( (detail) => {
+      detail.classList.add('fadeIn');
+    });
   } 
   else if (scrollPercentage <= 0.49) {
     canvaElement.style.position = "fixed";

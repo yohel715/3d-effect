@@ -308,6 +308,30 @@ h4 .hashtag-link {
   position: relative;
 }
 
+.details-cup-content .detail {
+  opacity: 0;
+}
+
+.detail.fadeIn {
+  animation: fadeIn 1s forwards;
+}
+
+.details-cup-content #detail01 {
+  animation-delay: 0.5s;
+}
+
+.details-cup-content #detail02 {
+  animation-delay: 1s;
+}
+
+.details-cup-content #detail03 {
+  animation-delay: 1.5s;
+}
+
+.details-cup-content #detail04 {
+  animation-delay: 2s;
+}
+
 .details-cup-content #detail01,
 .details-cup-content #detail03 {
   text-align: end;
@@ -942,4 +966,16 @@ section#footer {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
