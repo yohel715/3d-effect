@@ -86,7 +86,6 @@ mainElement.addEventListener("scroll", function () {
   const windowHeight = window.innerHeight; //height of the window
   const mainElementHeight = mainElement.scrollHeight; //height of the main element
   const scrollPercentage = scrollAmount / (mainElementHeight - windowHeight);//percentage of the scroll  
-  // console.log(scrollPercentage);
 
   if (scrollPercentage < 0.5) {
     object.rotation.y += 0.169 * direction; //rotate the object
@@ -99,12 +98,13 @@ mainElement.addEventListener("scroll", function () {
   }
 
   if (scrollPercentage >= 0.5) {
-    canvaElement.style.position = "static";
+    canvaElement.classList.add("static");
+    canvaElement.removeAttribute("style");
   } 
   else if (scrollPercentage <= 0.49) {
     canvaElement.style.position = "fixed";
+    canvaElement.classList.remove("static");
   }
-
 });
 
 render();
@@ -140,4 +140,41 @@ document.documentElement.addEventListener("load", function(){
 
 window.onload = function(){
   document.getElementById("loading").style.display = "none";
-}
+  // detectBrowser();
+};
+
+(function () {
+  document.addEventListener("mousemove", parallax);
+  function parallax(e) {
+    let _width = window.innerWidth / 2; // Get half window width
+    let _height = window.innerHeight / 2; // Get half window height
+    let _mouseX = e.clientX; //horizontal coordinate
+    let _mouseY = e.clientY; //vertical coordinate
+    let _depthX = `${ (_mouseX - _width) * 0.01}%`;
+    let _depthY = `${ (_mouseY - _height) * 0.01}%`;
+    
+    if (window.innerWidth > 520) {
+      detailsElement.forEach( (detail) => {
+        detail.style.top = `${_depthY} `;
+        detail.style.left = `${_depthX} `;
+      });
+    };
+  };
+})();
+
+/*gets the type of browser
+function detectBrowser() { 
+  if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
+      console.log('Opera');
+  } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+      console.log('Chrome');
+  } else if(navigator.userAgent.indexOf("Safari") != -1) {
+      console.log('Safari');
+  } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+      console.log('Firefox');
+  } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+      console.log('IE');
+  } else {
+      console.log('Unknown');
+  }
+}*/
