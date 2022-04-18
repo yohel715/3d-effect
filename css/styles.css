@@ -399,7 +399,7 @@ h4 .hashtag-link {
 }
 
 /**** thrid section *****/
-.footer-wrapper {
+section#footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -884,7 +884,7 @@ h4 .hashtag-link {
   .details-cup-content .row .detail p {
     font-size: 16px;
   }
-  .footer-wrapper {
+  section#footer {
     justify-content: space-between;
   }
   .footer {
