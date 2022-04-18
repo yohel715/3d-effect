@@ -114,8 +114,6 @@ render();
 * and set the width of the progress bar
 */
 const progressBarFull = document.getElementById('progressBarFull');
-getFromAPI('https://opensheet.elk.sh/1uk-DfBya4xDh5roFCh46gxnuqWM2MHHoTW12cJp-Wf8/Sheet1', getData);//API data
-
 function getFromAPI(url, callback){
   var obj;
   fetch(url)
@@ -124,13 +122,14 @@ function getFromAPI(url, callback){
     .then(() => callback(obj))
 };
 
+getFromAPI('https://opensheet.elk.sh/1uk-DfBya4xDh5roFCh46gxnuqWM2MHHoTW12cJp-Wf8/Sheet1', getData);
+
 function getData(arrOfObjs){
   var results = "";
   arrOfObjs.forEach( (x) => {
-    //print the progrees indicator on the progress bar
     results += "<div class='progressindicator'> " + x.Progreso + "<br/> <span>árboles donados</span> </div>"
     let questionCounter = x.Progreso;
-    //change the width of the progress bar
+    let MAX_QUESTIONS = x.Meta;
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
   })
   results += "";
