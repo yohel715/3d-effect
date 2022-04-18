@@ -313,9 +313,9 @@ h4 .hashtag-link {
   position: relative;
 }
 
-/* .detail.fadeIn {
+.detail.fadeIn {
   animation: fadeIn 1s forwards;
-} */
+}
 
 .details-cup-content #detail01 {
   animation-delay: 0.5s;
