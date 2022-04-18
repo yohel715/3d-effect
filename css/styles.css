@@ -309,7 +309,7 @@ h4 .hashtag-link {
 }
 
 .details-cup-content .detail {
-  opacity: 0;
+  opacity: 1;
 }
 
 /* .detail.fadeIn {
