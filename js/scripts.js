@@ -14,12 +14,9 @@ var camera = new THREE.PerspectiveCamera(
 );
 
 camera.position.set(0, 0, 10); // X, Y, Z
-
 var renderer = new THREE.WebGLRenderer({ antialias: true }); //initilize the renderer WebGLRenderer
 renderer.setClearColor(0x000000, 0); //background color
-
 renderer.setSize(window.innerWidth, window.innerHeight); //set the size of the renderer to the size of the window
-
 
 //resize the renderer and the camera when the window is resized
 window.addEventListener("resize", () => {
@@ -30,15 +27,18 @@ window.addEventListener("resize", () => {
 
 //render the scene
 var render = function () {
-    requestAnimationFrame(render);
-    renderer.render(scene, camera);
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
 };
+
 const elementContainer = document.querySelector('.rendered-object');
 elementContainer.appendChild(renderer.domElement); //This is a <canvas> element the renderer uses to display the scene to us.
 
 var loader = new GLTFLoader();
 var object;
-loader.load("assets/vaso.gltf", function (gltf) { //load the gltf file
+
+//load the gltf file
+loader.load("assets/vaso.gltf", function (gltf) {
     object = gltf.scene; //get the scene from the gltf file
     object.scale.set(0.9, 0.9, 0.9); //scale the object, X, Y, Z
     if (window.innerWidth <= 425 && window.innerHeight <= 875) {
@@ -70,14 +70,14 @@ scene.add(pointLightR);
 var pointLightL = new THREE.PointLight( 0xDFECF8, 1, 100, 2 );
 pointLightL.position.set( -20, -5, -2 );
 scene.add( pointLightL );
+// end of light sources
 
-//on down scroll addEventListener
 const mainElement = document.querySelector('body > main');
-let lastScrollTop = 0;
-//change the position absolute of the canva element 
 const canvaElement = document.querySelector('.rendered-object > canvas');
 var detailsElement = document.querySelectorAll('.detail');
+let lastScrollTop = 0;
 
+//on scroll addEventListener
 mainElement.addEventListener("scroll", function () {
   const direction = lastScrollTop > this.scrollTop ? 1 : -1;
   lastScrollTop = mainElement.scrollTop;
@@ -86,7 +86,6 @@ mainElement.addEventListener("scroll", function () {
   const windowHeight = window.innerHeight; //height of the window
   const mainElementHeight = mainElement.scrollHeight; //height of the main element
   const scrollPercentage = scrollAmount / (mainElementHeight - windowHeight);//percentage of the scroll  
-  // console.log(scrollPercentage);
 
   if (scrollPercentage < 0.5) {
     object.rotation.y += 0.169 * direction; //rotate the object
@@ -109,8 +108,14 @@ mainElement.addEventListener("scroll", function () {
 
 render();
 
-//Progress bar
+/*
+* Progress bar
+* get the amount of questions from the API 
+* and set the width of the progress bar
+*/
 const progressBarFull = document.getElementById('progressBarFull');
+getFromAPI('https://opensheet.elk.sh/1uk-DfBya4xDh5roFCh46gxnuqWM2MHHoTW12cJp-Wf8/Sheet1', getData);//API data
+
 function getFromAPI(url, callback){
   var obj;
   fetch(url)
@@ -119,21 +124,20 @@ function getFromAPI(url, callback){
     .then(() => callback(obj))
 };
 
-getFromAPI('https://opensheet.elk.sh/1uk-DfBya4xDh5roFCh46gxnuqWM2MHHoTW12cJp-Wf8/Sheet1', getData);
-
 function getData(arrOfObjs){
   var results = "";
   arrOfObjs.forEach( (x) => {
-    // results += "<div class='metaindicator'> Meta: " + x.Meta + "</div>"
+    //print the progrees indicator on the progress bar
     results += "<div class='progressindicator'> " + x.Progreso + "<br/> <span>árboles donados</span> </div>"
     let questionCounter = x.Progreso;
-    let MAX_QUESTIONS = x.Meta;
+    //change the width of the progress bar
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
   })
   results += "";
   document.getElementById("progressBarFull").innerHTML = results;
 };
 
+//on load, stwitch from the loading screen to the main screen
 document.documentElement.addEventListener("load", function(){
   document.getElementById("loading").style.display = "block";
 });
