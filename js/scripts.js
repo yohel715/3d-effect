@@ -93,6 +93,7 @@ mainElement.addEventListener("scroll", function () {
 
   if (scrollPercentage >= 0.30 && scrollPercentage < 0.70) {
     detailsElement.forEach( (detail) => {
+      // Enable the animation of the detail element.
       detail.classList.add('fadeIn');
     });
   }
@@ -140,7 +141,6 @@ document.documentElement.addEventListener("load", function(){
 
 window.onload = function(){
   document.getElementById("loading").style.display = "none";
-  // detectBrowser();
 };
 
 (function () {
@@ -161,20 +161,3 @@ window.onload = function(){
     };
   };
 })();
-
-/*gets the type of browser
-function detectBrowser() { 
-  if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
-      console.log('Opera');
-  } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
-      console.log('Chrome');
-  } else if(navigator.userAgent.indexOf("Safari") != -1) {
-      console.log('Safari');
-  } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
-      console.log('Firefox');
-  } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
-      console.log('IE');
-  } else {
-      console.log('Unknown');
-  }
-}*/
