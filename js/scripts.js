@@ -144,15 +144,10 @@ function getData(arrOfObjs){
   document.getElementById("progressBarFull").innerHTML = results;
 };
 
-//on load, stwitch from the loading screen to the main screen
-document.documentElement.addEventListener("load", function(){
-  document.getElementById("loading").style.display = "block";
-});
 
-window.onload = function(){
-  document.getElementById("loading").style.display = "none";
-};
-
+/* On mouse movement get the mouse position, 
+* and set te position of the details element.
+*/
 (function () {
   document.addEventListener("mousemove", parallax);
   function parallax(e) {
@@ -171,5 +166,14 @@ window.onload = function(){
     };
   };
 })();
+
+//on load, stwitch from the loading screen to the main screen
+document.documentElement.addEventListener("load", function(){
+  document.getElementById("loading").style.display = "block";
+});
+
+window.onload = function(){
+  document.getElementById("loading").style.display = "none";
+};
 
 render();
