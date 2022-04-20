@@ -111,7 +111,6 @@ mainElement.addEventListener("scroll", function () {
   */
   if (scrollPercentage >= 0.30 && scrollPercentage < 0.70) {
     detailsElement.forEach( (detail) => {
-      // Enable the animation of the detail element.
       detail.classList.add('fadeIn');
     });
   }
